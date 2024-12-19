@@ -10,16 +10,16 @@ import Login from './pages/auth/login';
 function App() {
   return (   
     <Router>
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/wallet" element={<Wallet/>}></Route>
-        <Route path="/exchange" element={<Exchange/>}></Route>
-        <Route path="/earn" element={<Earn/>}></Route>
-
-
-        <Route path="/login" element={<Login/>}></Route>
-      </Routes>
-    </Router>     
+         <Routes>
+           <Route path="/" element={<Dashboard/>}/>
+           <Route path="/wallet" element={<Wallet/>}></Route>
+           <Route path="/exchange" element={<Exchange/>}></Route>
+           <Route path="/earn" element={<Earn/>}></Route>
+   
+   
+           <Route path="/login" element={<Login/>}></Route>
+         </Routes>
+       </Router> 
   );
 }
 

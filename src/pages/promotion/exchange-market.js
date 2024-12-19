@@ -1,10 +1,10 @@
 
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 export default function Excange(){
     return(
 <div>
     {/* <div className="preload preload-container">
-        <div className="preload-logo" style={{backgroundImage: "url('images/logo/144.png')"}}>
+        <div className="preload-logo" style={{backgroundImage: "url('assets/images/logo/144.png')"}}>
           <div className="spinner"></div>
         </div>
       </div> */}
@@ -59,7 +59,7 @@ export default function Excange(){
                         <ul className="mt-16">
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ETH</p>
@@ -74,7 +74,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">arb_ETH</p>
@@ -89,7 +89,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -104,7 +104,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ARB</p>
@@ -119,7 +119,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WETH</p>
@@ -134,7 +134,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">MATIC</p>
@@ -149,7 +149,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-14.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-14.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">OP_ETH</p>
@@ -164,7 +164,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -179,7 +179,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-15.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-15.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WSTETH</p>
@@ -205,7 +205,7 @@ export default function Excange(){
                         <ul className="mt-16">
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ETH</p>
@@ -220,7 +220,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">arb_ETH</p>
@@ -235,7 +235,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -250,7 +250,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ARB</p>
@@ -265,7 +265,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WETH</p>
@@ -280,7 +280,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">MATIC</p>
@@ -295,7 +295,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-14.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-14.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">OP_ETH</p>
@@ -310,7 +310,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -325,7 +325,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-15.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-15.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WSTETH</p>
@@ -351,7 +351,7 @@ export default function Excange(){
                         <ul className="mt-16">
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ETH</p>
@@ -366,7 +366,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">arb_ETH</p>
@@ -381,7 +381,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -396,7 +396,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ARB</p>
@@ -411,7 +411,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WETH</p>
@@ -426,7 +426,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">MATIC</p>
@@ -441,7 +441,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-14.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-14.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">OP_ETH</p>
@@ -456,7 +456,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -471,7 +471,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-15.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-15.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WSTETH</p>
@@ -497,7 +497,7 @@ export default function Excange(){
                         <ul className="mt-16">
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ETH</p>
@@ -512,7 +512,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">arb_ETH</p>
@@ -527,7 +527,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -542,7 +542,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ARB</p>
@@ -557,7 +557,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WETH</p>
@@ -572,7 +572,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">MATIC</p>
@@ -587,7 +587,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-14.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-14.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">OP_ETH</p>
@@ -602,7 +602,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -617,7 +617,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-15.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-15.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WSTETH</p>
@@ -643,7 +643,7 @@ export default function Excange(){
                         <ul className="mt-16">
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ETH</p>
@@ -658,7 +658,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">arb_ETH</p>
@@ -673,7 +673,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -688,7 +688,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ARB</p>
@@ -703,7 +703,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WETH</p>
@@ -718,7 +718,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">MATIC</p>
@@ -733,7 +733,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-14.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-14.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">OP_ETH</p>
@@ -748,7 +748,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -763,7 +763,7 @@ export default function Excange(){
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-15.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-15.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WSTETH</p>
@@ -783,33 +783,33 @@ export default function Excange(){
         </div>
     </div>
     
-    <div className="menubar-footer footer-fixed">
-        <ul className="inner-bar">
-            <li>
-                <a href="home.html">
-                    <i className="icon icon-home2"></i>
-                    Home
-                </a>
-            </li>
-            <li className="active">
-                <a href="exchange-market.html">
-                    <i className="icon icon-exchange"></i>
-                    Exchange
-                </a>
-            </li>
-            <li>
-                <a href="earn.html">
-                    <i className="icon icon-earn2"></i>
-                    Earn
-                </a>
-            </li>
-            <li>
-                <a href="wallet.html">
-                    <i className="icon icon-wallet"></i>
-                    Wallet
-                </a>
-            </li>
-        </ul>
+      <div className="menubar-footer footer-fixed">
+      <ul className="inner-bar">
+        <li className="active">
+        <Link to="/">
+            <i className="icon icon-home2"></i>
+            Home
+            </Link>
+        </li>
+        <li>
+        <Link to="/exchange">
+            <i className="icon icon-exchange"></i>
+            Exchange
+            </Link>
+        </li>
+        <li>
+        <Link to="/earn">
+            <i className="icon icon-earn"></i>
+            Earn
+            </Link>
+        </li>
+        <li>
+        <Link to="/wallet">
+            <i className="icon icon-wallet"></i>
+            Wallet
+            </Link>
+        </li>
+      </ul>
     </div>
     <div className="modal fade action-sheet" id="filter">
         <div className="modal-dialog" role="document">
@@ -821,7 +821,7 @@ export default function Excange(){
                 <ul className="mt-20 pb-16">
                     <li>
                         <div className="item-check active coin-item style-2 gap-8">
-                            <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                            <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                             <p className="content text-large">
                                 Ethereum
                                 <i className="icon icon-check-circle"></i>
@@ -830,7 +830,7 @@ export default function Excange(){
                     </li>
                     <li className="mt-4">
                          <div className="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-11.jpg" alt="img" className="img"/>
+                            <img src="assets/images/coin/coin-11.jpg" alt="img" className="img"/>
                             <p className="content text-large">
                                 Arbitrum
                                 <i className="icon icon-check-circle"></i>
@@ -839,7 +839,7 @@ export default function Excange(){
                     </li>
                     <li className="mt-4">
                          <div className="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-12.jpg" alt="img" className="img"/>
+                            <img src="assets/images/coin/coin-12.jpg" alt="img" className="img"/>
                             <p className="content text-large">
                                 zkSync Era
                                 <i className="icon icon-check-circle"></i>
@@ -848,7 +848,7 @@ export default function Excange(){
                     </li>
                     <li className="mt-4">
                          <div className="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                            <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                             <p className="content text-large">
                                 Tron
                                 <i className="icon icon-check-circle"></i>
@@ -857,7 +857,7 @@ export default function Excange(){
                     </li>
                     <li className="mt-4">
                          <div className="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                            <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                             <p className="content text-large">
                                 BNB Chain
                                 <i className="icon icon-check-circle"></i>
@@ -866,7 +866,7 @@ export default function Excange(){
                     </li>
                     <li className="mt-4">
                          <div className="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-13.jpg" alt="img" className="img"/>
+                            <img src="assets/images/coin/coin-13.jpg" alt="img" className="img"/>
                             <p className="content text-large">
                                 Polygon
                                 <i className="icon icon-check-circle"></i>
@@ -875,7 +875,7 @@ export default function Excange(){
                     </li>
                     <li className="mt-4">
                          <div className="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                            <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                             <p className="content text-large">
                                 Optimism
                                 <i className="icon icon-check-circle"></i>
@@ -884,7 +884,7 @@ export default function Excange(){
                     </li>
                     <li className="mt-4">
                          <div className="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                            <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                             <p className="content text-large">
                                 Avalanche C
                                 <i className="icon icon-check-circle"></i>
@@ -893,7 +893,7 @@ export default function Excange(){
                     </li>
                     <li className="mt-4">
                          <div className="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                            <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                             <p className="content text-large">
                                 Fantom
                                 <i className="icon icon-check-circle"></i>
@@ -902,7 +902,7 @@ export default function Excange(){
                     </li>
                     <li className="mt-4">
                          <div className="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                            <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                             <p className="content text-large">
                                 Conflux eSpace
                                 <i className="icon icon-check-circle"></i>

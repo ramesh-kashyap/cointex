@@ -1,17 +1,17 @@
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 export default function Wallet(){
     return(
 <div className="app-wallet">
     {/* <div className="preload preload-container">
-        <div className="preload-logo" style={{ backgroundImage: "url('images/logo/144.png')" }}>
+        <div className="preload-logo" style={{ backgroundImage: "url('assets/images/logo/144.png')" }}>
             <div className="spinner"></div>
         </div>
     </div> */}
     <div className="header-style2 fixed-top bg-menuDark">
         <div className="d-flex justify-content-between align-items-center">
             <a className="box-account" href="user-info.html">
-                <img src="images/avt/avt2.jpg" alt="img" className="avt"/>
+                <img src="assets/images/avt/avt2.jpg" alt="img" className="avt"/>
                 <div className="info">
                     <p className="text-xsmall text-secondary">Welcome back!</p>
                     <h5 className="mt-4">Tony Nguyen</h5>
@@ -66,32 +66,32 @@ export default function Wallet(){
                 <ul className="mt-16 grid-5 gap-12">
                     <li>
                         <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                            <img src="images/avt/avt3.jpg" alt="img" className="box-round"/>
+                            <img src="assets/images/avt/avt3.jpg" alt="img" className="box-round"/>
                             <p className="text-center">Jane Cooper</p>
                         </a>
                     </li>
                     <li>
                         <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
-                            <img src="images/avt/avt4.jpg" alt="img" className="box-round"/>
+                            <img src="assets/images/avt/avt4.jpg" alt="img" className="box-round"/>
                             <p className="text-center">Wade Warren</p>
 
                         </a>
                     </li>
                     <li>
                         <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
-                            <img src="images/avt/avt5.jpg" alt="img" className="box-round"/>
+                            <img src="assets/images/avt/avt5.jpg" alt="img" className="box-round"/>
                             <p className="text-center">Jenny Wilson</p>
                         </a>
                     </li>
                     <li>
                         <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
-                            <img src="images/avt/avt6.jpg" alt="img" className="box-round"/>
+                            <img src="assets/images/avt/avt6.jpg" alt="img" className="box-round"/>
                             <p className="text-center">Jenny Wilson</p>
                         </a>
                     </li>
                     <li>
                         <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
-                            <img src="images/avt/avt7.jpg" alt="img" className="box-round"/>
+                            <img src="assets/images/avt/avt7.jpg" alt="img" className="box-round"/>
                             <p className="text-center">Robert Fox</p>
                         </a>
                     </li>
@@ -118,7 +118,7 @@ export default function Wallet(){
 						<ul>
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-1 gap-12 bg-surface">
-                                    <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Bitcoin</p>
@@ -133,7 +133,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="choose-payment.html" className="coin-item style-1 gap-12 bg-surface">
-                                    <img src="images/coin/coin-2.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-2.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Withdraw</p>
@@ -146,7 +146,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="choose-payment.html" className="coin-item style-1 gap-12 bg-surface">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Ethereum</p>
@@ -161,7 +161,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="choose-payment.html" className="coin-item style-1 gap-12 bg-surface">
-                                    <img src="images/coin/coin-4.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-4.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Anchor</p>
@@ -180,7 +180,7 @@ export default function Wallet(){
 						<ul>
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-1 gap-12 bg-surface">
-                                    <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Bitcoin</p>
@@ -195,7 +195,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="choose-payment.html" className="coin-item style-1 gap-12 bg-surface">
-                                    <img src="images/coin/coin-2.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-2.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Withdraw</p>
@@ -208,7 +208,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="choose-payment.html" className="coin-item style-1 gap-12 bg-surface">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Ethereum</p>
@@ -223,7 +223,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="choose-payment.html" className="coin-item style-1 gap-12 bg-surface">
-                                    <img src="images/coin/coin-4.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-4.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Anchor</p>
@@ -243,35 +243,34 @@ export default function Wallet(){
         </div>
     </div>
     
-    <div className="menubar-footer footer-fixed">
-        <ul className="inner-bar">
-            <li>
-                <a href="home.html">
-                    <i className="icon icon-home2"></i>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="exchange-market.html">
-                    <i className="icon icon-exchange"></i>
-                    Exchange
-                </a>
-            </li>
-            <li>
-                <a href="earn.html">
-                    <i className="icon icon-earn"></i>
-                    Earn
-                </a>
-            </li>
-            <li className="active">
-                <a href="wallet.html">
-                    <i className="icon icon-wallet2"></i>
-                    Wallet
-                </a>
-            </li>
-        </ul>
+      <div className="menubar-footer footer-fixed">
+      <ul className="inner-bar">
+        <li className="active">
+        <Link to="/">
+            <i className="icon icon-home2"></i>
+            Home
+            </Link>
+        </li>
+        <li>
+        <Link to="/exchange">
+            <i className="icon icon-exchange"></i>
+            Exchange
+            </Link>
+        </li>
+        <li>
+        <Link to="/earn">
+            <i className="icon icon-earn"></i>
+            Earn
+            </Link>
+        </li>
+        <li>
+        <Link to="/wallet">
+            <i className="icon icon-wallet"></i>
+            Wallet
+            </Link>
+        </li>
+      </ul>
     </div>
-
    
     <div className="modal fade action-sheet" id="accountWallet">
         <div className="modal-dialog" role="document">
@@ -301,7 +300,7 @@ export default function Wallet(){
                         <ul className="mt-4">
                             <li>
                                 <a href="#" className="coin-item style-1 gap-12 bg-menuDark">
-                                    <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Bitcoin</p>
@@ -316,7 +315,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="#" className="coin-item style-1 gap-12 bg-menuDark">
-                                    <img src="images/coin/coin-2.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-2.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Withdraw</p>
@@ -329,7 +328,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="#" className="coin-item style-1 gap-12 bg-menuDark">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Ethereum</p>
@@ -344,7 +343,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="#" className="coin-item style-1 gap-12 bg-menuDark">
-                                    <img src="images/coin/coin-2.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-2.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Deposit</p>
@@ -356,7 +355,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="#" className="coin-item style-1 gap-12 bg-menuDark">
-                                    <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Bitcoin</p>
@@ -371,7 +370,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="#" className="coin-item style-1 gap-12 bg-menuDark">
-                                    <img src="images/coin/coin-1.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-1.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Bitcoin</p>
@@ -386,7 +385,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="#" className="coin-item style-1 gap-12 bg-menuDark">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Ethereum</p>
@@ -401,7 +400,7 @@ export default function Wallet(){
                             </li>
                             <li className="mt-8">
                                 <a href="#" className="coin-item style-1 gap-12 bg-menuDark">
-                                    <img src="images/coin/coin-4.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-4.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-large">Anchor</p>
@@ -467,146 +466,146 @@ export default function Wallet(){
                         <ul className="mt-12 grid-4 rg-16 cg-25">
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt7.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt7.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Jane Cooper</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt8.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt8.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Wade Warren</p>
         
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt5.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt5.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Esther Howard</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt9.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt9.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Jenny Wilson</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt10.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt10.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Arlene McCoy</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt11.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt11.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Eleanor Pena</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt12.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt12.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Esther Howard</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt13.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt13.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Theresa Webb</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt14.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt14.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Ronald Richards</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt15.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt15.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Robert Fox</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt16.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt16.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">William son</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt17.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt17.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Kristin Watson</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt18.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt18.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Brooklyn Sim</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt19.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt19.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Guy Hawkins</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt20.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt20.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Dianne Russell</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt2.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt2.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Marvin Kinney</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt21.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt21.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Darrell Steward</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt22.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt22.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Court Henry</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt23.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt23.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Kathryn Murphy</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt24.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt24.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Annette Black</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt25.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt25.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Jenny Wilson</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt26.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt26.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Jane Cooper</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt27.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt27.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Bessie Cooper</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
-                                    <img src="images/avt/avt28.jpg" alt="img" className="box-round"/>
+                                    <img src="assets/images/avt/avt28.jpg" alt="img" className="box-round"/>
                                     <p className="text-center">Savan Nguyen</p>
                                 </a>
                             </li>

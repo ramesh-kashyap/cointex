@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 export default function dashboard(){
 
 return (
     <div>
         
      {/* <div className="preload preload-container">
-        <div className="preload-logo" style={{ backgroundImage: "url('images/logo/144.png')" }}>
+        <div className="preload-logo" style={{ backgroundImage: "url('assets/images/logo/144.png')" }}>
           <div className="spinner"></div>
         </div>
       </div> */}
@@ -16,7 +16,7 @@ return (
   <div className="d-flex justify-content-between align-items-center gap-14">
     <div className="box-account style-2">
       <a href="user-info.html">
-        <img src="images/avt/avt2.jpg" alt="img" className="avt" />
+        <img src="assets/images/avt/avt2.jpg" alt="img" className="avt" />
       </a>
       <div className="search-box box-input-field style-2">
         <a href="home-search.html" className="icon-search"></a>
@@ -89,7 +89,7 @@ return (
         <div className="swiper-slide">
           <a href="exchange-market.html" className="coin-box d-block">
             <div className="coin-logo">
-              <img src="images/coin/market-1.jpg" alt="img" className="logo" />
+              <img src="assets/images/coin/market-1.jpg" alt="img" className="logo" />
               <div className="title">
                 <p>Bitcoin</p>
                 <span>BTC</span>
@@ -108,7 +108,7 @@ return (
         <div className="swiper-slide">
           <a href="exchange-market.html" className="coin-box d-block">
             <div className="coin-logo">
-              <img src="images/coin/market-3.jpg" alt="img" className="logo" />
+              <img src="assets/images/coin/market-3.jpg" alt="img" className="logo" />
               <div className="title">
                 <p>Binance</p>
                 <span>BNB</span>
@@ -127,7 +127,7 @@ return (
         <div className="swiper-slide">
           <a href="exchange-market.html" className="coin-box d-block">
             <div className="coin-logo">
-              <img src="images/coin/coin-3.jpg" alt="img" className="logo" />
+              <img src="assets/images/coin/coin-3.jpg" alt="img" className="logo" />
               <div className="title">
                 <p>Ethereum</p>
                 <span>ETH</span>
@@ -182,7 +182,7 @@ return (
                         <ul className="mt-16">
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ETH</p>
@@ -197,7 +197,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">arb_ETH</p>
@@ -212,7 +212,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -227,7 +227,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ARB</p>
@@ -242,7 +242,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WETH</p>
@@ -257,7 +257,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">MATIC</p>
@@ -284,7 +284,7 @@ return (
                         <ul className="mt-16">
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ETH</p>
@@ -299,7 +299,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">arb_ETH</p>
@@ -314,7 +314,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -329,7 +329,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ARB</p>
@@ -344,7 +344,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WETH</p>
@@ -359,7 +359,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">MATIC</p>
@@ -385,7 +385,7 @@ return (
                         <ul className="mt-16">
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ETH</p>
@@ -400,7 +400,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">arb_ETH</p>
@@ -415,7 +415,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -430,7 +430,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ARB</p>
@@ -445,7 +445,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WETH</p>
@@ -460,7 +460,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">MATIC</p>
@@ -487,7 +487,7 @@ return (
                         <ul className="mt-16">
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ETH</p>
@@ -502,7 +502,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">arb_ETH</p>
@@ -517,7 +517,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -532,7 +532,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ARB</p>
@@ -547,7 +547,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WETH</p>
@@ -562,7 +562,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">MATIC</p>
@@ -589,7 +589,7 @@ return (
                         <ul className="mt-16">
                             <li>
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ETH</p>
@@ -604,7 +604,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">arb_ETH</p>
@@ -619,7 +619,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WBTC</p>
@@ -634,7 +634,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">ARB</p>
@@ -649,7 +649,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">WETH</p>
@@ -664,7 +664,7 @@ return (
                             </li>
                             <li className="mt-16">
                                 <a href="choose-payment.html" className="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" className="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" className="img"/>
                                     <div className="content">
                                         <div className="title">
                                             <p className="mb-4 text-button">MATIC</p>
@@ -688,28 +688,28 @@ return (
     <div className="menubar-footer footer-fixed">
   <ul className="inner-bar">
     <li className="active">
-      <a href="home.html">
+    <Link to="/">
         <i className="icon icon-home2"></i>
         Home
-      </a>
+        </Link>
     </li>
     <li>
-      <a href="exchange-market.html">
+    <Link to="/exchange">
         <i className="icon icon-exchange"></i>
         Exchange
-      </a>
+        </Link>
     </li>
     <li>
-      <a href="earn.html">
+    <Link to="/earn">
         <i className="icon icon-earn"></i>
         Earn
-      </a>
+        </Link>
     </li>
     <li>
-      <a href="wallet.html">
+    <Link to="/wallet">
         <i className="icon icon-wallet"></i>
         Wallet
-      </a>
+        </Link>
     </li>
   </ul>
 </div>

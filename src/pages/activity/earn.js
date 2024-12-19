@@ -1,9 +1,9 @@
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 export default function(){
     return(
 <body>
     {/* <div class="preload preload-container">
-        <div class="preload-logo" style={{backgroundImage: "url('images/logo/144.png')"}}>
+        <div class="preload-logo" style={{backgroundImage: "url('assets/images/logo/144.png')"}}>
             <div class="spinner"></div>
         </div>
     </div> */}
@@ -62,7 +62,7 @@ export default function(){
                         <ul>
                             <li>
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">ETH</p>
@@ -77,7 +77,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">arb_ETH</p>
@@ -92,7 +92,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">WBTC</p>
@@ -107,7 +107,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">ARB</p>
@@ -122,7 +122,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">WETH</p>
@@ -137,7 +137,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">MATIC</p>
@@ -156,7 +156,7 @@ export default function(){
                         <ul>
                             <li>
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">ETH</p>
@@ -171,7 +171,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">arb_ETH</p>
@@ -186,7 +186,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">WBTC</p>
@@ -201,7 +201,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">ARB</p>
@@ -216,7 +216,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">WETH</p>
@@ -231,7 +231,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">MATIC</p>
@@ -250,7 +250,7 @@ export default function(){
                         <ul>
                             <li>
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-6.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-6.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">ETH</p>
@@ -265,7 +265,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-7.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-7.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">arb_ETH</p>
@@ -280,7 +280,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-8.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-8.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">WBTC</p>
@@ -295,7 +295,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-3.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-3.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">ARB</p>
@@ -310,7 +310,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-9.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-9.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">WETH</p>
@@ -325,7 +325,7 @@ export default function(){
                             </li>
                             <li class="mt-16">
                                 <a href="choose-payment.html" class="coin-item style-2 gap-12">
-                                    <img src="images/coin/coin-10.jpg" alt="img" class="img"/>
+                                    <img src="assets/images/coin/coin-10.jpg" alt="img" class="img"/>
                                     <div class="content">
                                         <div class="title">
                                             <p class="mb-4 text-button">MATIC</p>
@@ -345,35 +345,34 @@ export default function(){
         </div>
     </div>
     
-    <div class="menubar-footer footer-fixed">
-        <ul class="inner-bar">
-            <li>
-                <a href="home.html">
-                    <i class="icon icon-home2"></i>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="exchange-market.html">
-                    <i class="icon icon-exchange"></i>
-                    Exchange
-                </a>
-            </li>
-            <li class="active">
-                <a href="earn.html">
-                    <i class="icon icon-earn2"></i>
-                    Earn
-                </a>
-            </li>
-            <li>
-                <a href="wallet.html">
-                    <i class="icon icon-wallet"></i>
-                    Wallet
-                </a>
-            </li>
-        </ul>
-    </div>
-
+     <div className="menubar-footer footer-fixed">
+     <ul className="inner-bar">
+       <li className="active">
+       <Link to="/">
+           <i className="icon icon-home2"></i>
+           Home
+           </Link>
+       </li>
+       <li>
+       <Link to="/exchange">
+           <i className="icon icon-exchange"></i>
+           Exchange
+           </Link>
+       </li>
+       <li>
+       <Link to="/earn">
+           <i className="icon icon-earn"></i>
+           Earn
+           </Link>
+       </li>
+       <li>
+       <Link to="/wallet">
+           <i className="icon icon-wallet"></i>
+           Wallet
+           </Link>
+       </li>
+     </ul>
+   </div>
     <div class="modal fade action-sheet" id="filter">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -384,7 +383,7 @@ export default function(){
                 <ul class="mt-20 pb-16">
                     <li>
                         <div class="item-check active coin-item style-2 gap-8">
-                            <img src="images/coin/coin-3.jpg" alt="img" class="img"/>
+                            <img src="assets/images/coin/coin-3.jpg" alt="img" class="img"/>
                             <p class="content text-large">
                                 Ethereum
                                 <i class="icon icon-check-circle"></i>
@@ -393,7 +392,7 @@ export default function(){
                     </li>
                     <li class="mt-4">
                          <div class="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-11.jpg" alt="img" class="img"/>
+                            <img src="assets/images/coin/coin-11.jpg" alt="img" class="img"/>
                             <p class="content text-large">
                                 Arbitrum
                                 <i class="icon icon-check-circle"></i>
@@ -402,7 +401,7 @@ export default function(){
                     </li>
                     <li class="mt-4">
                          <div class="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-12.jpg" alt="img" class="img"/>
+                            <img src="assets/images/coin/coin-12.jpg" alt="img" class="img"/>
                             <p class="content text-large">
                                 zkSync Era
                                 <i class="icon icon-check-circle"></i>
@@ -411,7 +410,7 @@ export default function(){
                     </li>
                     <li class="mt-4">
                          <div class="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-9.jpg" alt="img" class="img"/>
+                            <img src="assets/images/coin/coin-9.jpg" alt="img" class="img"/>
                             <p class="content text-large">
                                 Tron
                                 <i class="icon icon-check-circle"></i>
@@ -420,7 +419,7 @@ export default function(){
                     </li>
                     <li class="mt-4">
                          <div class="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-10.jpg" alt="img" class="img"/>
+                            <img src="assets/images/coin/coin-10.jpg" alt="img" class="img"/>
                             <p class="content text-large">
                                 BNB Chain
                                 <i class="icon icon-check-circle"></i>
@@ -429,7 +428,7 @@ export default function(){
                     </li>
                     <li class="mt-4">
                          <div class="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-13.jpg" alt="img" class="img"/>
+                            <img src="assets/images/coin/coin-13.jpg" alt="img" class="img"/>
                             <p class="content text-large">
                                 Polygon
                                 <i class="icon icon-check-circle"></i>
@@ -438,7 +437,7 @@ export default function(){
                     </li>
                     <li class="mt-4">
                          <div class="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-1.jpg" alt="img" class="img"/>
+                            <img src="assets/images/coin/coin-1.jpg" alt="img" class="img"/>
                             <p class="content text-large">
                                 Optimism
                                 <i class="icon icon-check-circle"></i>
@@ -447,7 +446,7 @@ export default function(){
                     </li>
                     <li class="mt-4">
                          <div class="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-7.jpg" alt="img" class="img"/>
+                            <img src="assets/images/coin/coin-7.jpg" alt="img" class="img"/>
                             <p class="content text-large">
                                 Avalanche C
                                 <i class="icon icon-check-circle"></i>
@@ -456,7 +455,7 @@ export default function(){
                     </li>
                     <li class="mt-4">
                          <div class="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-8.jpg" alt="img" class="img"/>
+                            <img src="assets/images/coin/coin-8.jpg" alt="img" class="img"/>
                             <p class="content text-large">
                                 Fantom
                                 <i class="icon icon-check-circle"></i>
@@ -465,7 +464,7 @@ export default function(){
                     </li>
                     <li class="mt-4">
                          <div class="item-check coin-item style-2 gap-8">
-                            <img src="images/coin/coin-6.jpg" alt="img" class="img"/>
+                            <img src="assets/images/coin/coin-6.jpg" alt="img" class="img"/>
                             <p class="content text-large">
                                 Conflux eSpace
                                 <i class="icon icon-check-circle"></i>
