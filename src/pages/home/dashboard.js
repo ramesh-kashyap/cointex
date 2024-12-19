@@ -5,11 +5,11 @@ export default function dashboard(){
 return (
     <div>
         
-     <div className="preload preload-container">
+     {/* <div className="preload preload-container">
         <div className="preload-logo" style={{ backgroundImage: "url('images/logo/144.png')" }}>
           <div className="spinner"></div>
         </div>
-      </div>
+      </div> */}
       
 
       <div className="header-style2 fixed-top bg-menuDark">
