@@ -1,71 +1,85 @@
 import React, { useState, useEffect } from 'react';
-
+import { BrowserRouter as Route, Router,Routes, Link } from 'react-router-dom';
 
 export default function Listblog(){
     return(
     <div>
 
     <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
-        <a href="javascript:void(0);" className="left back-btn"><i className="icon-left-btn"></i></a>
+        <Link to="/">
+        <a  className="left back-btn"><i className="icon-left-btn"></i></a>
+        </Link>
         <h3>Hot News</h3>
-        <a href="#filter" className="right text-secondary" data-bs-toggle="modal"><i className="icon-funnel"></i></a>
+        <a href="" className="right text-secondary" data-bs-toggle="modal"><i className="icon-funnel"></i></a>
     </div>
     <div className="pt-45 pb-16">
         <div className="tf-container">
             <ul className="mt-12 grid-2 gap-16">
                 <li>
-                    <a href="blog-detail.html" className="blog-item">
-                        <img src="images/blog/blog1.jpg" alt="img"/>
+                    <Link to="/blog-details">
+                    <a href="" className="blog-item">
+                        <img src="assets/images/blog/blog1.jpg" alt="img"/>
                         <div className="content">
                             <p className="text-xsmall text-secondary title">Daria Morgen &#8226; Dec 21, 2023 </p>
                             <p className="mt-4">The Nightmare Before Christmas - Bomb Threats and Bitcoin</p>
                         </div>
                     </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="blog-detail.html" className="blog-item">
-                        <img src="images/blog/blog2.jpg" alt="img"/>
+                <Link to="/blog-details">
+                    <a href="" className="blog-item">
+                        <img src="assets/images/blog/blog2.jpg" alt="img"/>
                         <div className="content">
                             <p className="text-xsmall text-secondary title">Jane Cooper &#8226; May 19, 2023 </p>
                             <p className="mt-4">The Crypto.com App Introduces Trusted Device Management</p>
                         </div>
                     </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="blog-detail.html" className="blog-item">
-                        <img src="images/blog/blog3.jpg" alt="img"/>
+                <Link to="/blog-details">
+                    <a href="" className="blog-item">
+                        <img src="assets/images/blog/blog3.jpg" alt="img"/>
                         <div className="content">
                             <p className="text-xsmall text-secondary title">Wade Warren &#8226; June 9, 2023 </p>
                             <p className="mt-4">Cybersecurity Predictions 2023 – How did we do?</p>
                         </div>
                     </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="blog-detail.html" className="blog-item">
-                        <img src="images/blog/blog4.jpg" alt="img"/>
+                <Link to="/blog-details">
+                    <a href="" className="blog-item">
+                        <img src="assets/images/blog/blog4.jpg" alt="img"/>
                         <div className="content">
                             <p className="text-xsmall text-secondary title">Esther Howard &#8226; Jan 27, 2023 </p>
                             <p className="mt-4">Cryptocurrency News: Building in Resiliency and International Co-Operation</p>
                         </div>
                     </a>
+                    </Link>
                 </li>
                 <li>
+                <Link to="/blog-details">
                     <a href="blog-detail.html" className="blog-item">
-                        <img src="images/blog/blog5.jpg" alt="img"/>
+                        <img src="assets/images/blog/blog5.jpg" alt="img"/>
                         <div className="content">
                             <p className="text-xsmall text-secondary title">Leslie Alex &#8226; Apr 19, 2023 </p>
                             <p className="mt-4">Blockchain, cryptocurrencies, and mining</p>
                         </div>
                     </a>
+                    </Link>
                 </li>
                 <li>
+                <Link to="/blog-details">
                     <a href="blog-detail.html" className="blog-item">
-                        <img src="images/blog/blog6.jpg" alt="img"/>
+                        <img src="assets/images/blog/blog6.jpg" alt="img"/>
                         <div className="content">
                             <p className="text-xsmall text-secondary title">Jenny Wilson &#8226; May 21, 2023 </p>
                             <p className="mt-4">Security Predictions 2023: how are we doing so far?</p>
                         </div>
                     </a>
+                    </Link>
                 </li>
                 
             </ul>
