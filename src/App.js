@@ -24,6 +24,7 @@ import Earn from './pages/activity/earn';
 // auth
 import Login from './pages/auth/login';
 import Register from './pages/auth/register';
+import Forgot from './pages/auth/forgot';
 
 function App() {
   return (   
@@ -53,6 +54,7 @@ function App() {
             {/* auth */}
            <Route path="/login" element={<Login/>}></Route>
            <Route path="/register" element={<Register/>}/>
+           <Route path="/forgot" element={<Forgot/>}/>
          </Routes>
        </Router> 
   );

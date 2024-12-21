@@ -8,13 +8,13 @@ export default function Login(){
     const handleSubmit = async (e) =>{
         e.preventDefault();
     try {
-        const response = await Api.post('/api/webapi/addbank',{
+        const response = await Api.post('/api/login',{
            email : email,
            password: password,
         });
 
         if(response.data.status){
-            console.log('Bank information added/updated successfully');
+            console.log('error accur');
         }
         else{
             console.error(response.data.message);

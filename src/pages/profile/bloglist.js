@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 
-export default function Listblog(){(
+export default function Listblog(){
+    return(
     <div>
 
     <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
