@@ -15,9 +15,9 @@ return (
       <div className="header-style2 fixed-top bg-menuDark">
   <div className="d-flex justify-content-between align-items-center gap-14">
     <div className="box-account style-2">
-      <a href="user-info.html">
+      <Link to="/Userinfo">
         <img src="assets/images/avt/avt2.jpg" alt="img" className="avt" />
-      </a>
+      </Link>
       <div className="search-box box-input-field style-2">
         <a href="home-search.html" className="icon-search"></a>
         <input type="text" placeholder="Looking for crypto" required className="clear-ip" />
@@ -45,36 +45,38 @@ return (
     </h1>
     <ul className="mt-16 grid-4 m--16">
       <li>
-        <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+        <Link  to="/Choosepayment" className="tf-list-item d-flex flex-column gap-8 align-items-center">
           <span className="box-round bg-surface d-flex justify-content-center align-items-center">
             <i className="icon icon-way"></i>
           </span>
           Send
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="qr-code2.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+        <Link to="/Qrcode" className="tf-list-item d-flex flex-column gap-8 align-items-center">
           <span className="box-round bg-surface d-flex justify-content-center align-items-center">
             <i className="icon icon-way2"></i>
           </span>
           Receive
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="buy-quantity.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+
+    
+        <Link to="/Buyquantity" className="tf-list-item d-flex flex-column gap-8 align-items-center">
           <span className="box-round bg-surface d-flex justify-content-center align-items-center">
             <i className="icon icon-wallet"></i>
           </span>
           Buy
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="earn.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+        <Link to="/earn" className="tf-list-item d-flex flex-column gap-8 align-items-center">
           <span className="box-round bg-surface d-flex justify-content-center align-items-center">
             <i className="icon icon-exchange"></i>
           </span>
           Earn
-        </a>
+        </Link>
       </li>
     </ul>
   </div>

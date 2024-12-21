@@ -19,7 +19,7 @@ export default function Wallet(){
                 </div>
             </a>
             <div className="d-flex align-items-center gap-8">
-                <a href="choose-cryptocurrency.html" className="icon-search"></a>
+                <Link to="/Cryptocurrency" className="icon-search"></Link>
                 <a href="#notification" className="icon-noti box-noti" data-bs-toggle="modal"></a>
             </div>
         </div>
@@ -31,28 +31,28 @@ export default function Wallet(){
                 <h1 className="mt-16"><a href="#">$2159,34</a></h1>
                 <ul className="mt-16 grid-4 m--16">
                     <li>
-                        <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+                        <Link to="/Choosepayment" className="tf-list-item d-flex flex-column gap-8 align-items-center">
                             <span className="box-round bg-surface d-flex justify-content-center align-items-center"><i className="icon icon-way"></i></span>
                             Send
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="qr-code2.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+                        <Link to="/Qrcode" className="tf-list-item d-flex flex-column gap-8 align-items-center">
                             <span className="box-round bg-surface d-flex justify-content-center align-items-center"><i className="icon icon-way2"></i></span>
                             Receive
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="buy-quantity.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+                        <Link to="/Cryptocurrency" className="tf-list-item d-flex flex-column gap-8 align-items-center">
                             <span className="box-round bg-surface d-flex justify-content-center align-items-center"><i className="icon icon-wallet"></i></span>
                             Buy
-                        </a>
+                        </Link>
                     </li>
                     <li data-bs-toggle="modal" data-bs-target="#walletHistory">
-                        <a href="javascript:void(0);" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+                        <Link to="/Cryptocurrency" className="tf-list-item d-flex flex-column gap-8 align-items-center">
                             <span className="box-round bg-surface d-flex justify-content-center align-items-center"><i className="icon icon-history"></i></span>
                             History
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -65,35 +65,35 @@ export default function Wallet(){
                 </div>
                 <ul className="mt-16 grid-5 gap-12">
                     <li>
-                        <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-4 align-items-center">
+                        <Link to="/Choosepayment" className="tf-list-item d-flex flex-column gap-4 align-items-center">
                             <img src="assets/images/avt/avt3.jpg" alt="img" className="box-round"/>
                             <p className="text-center">Jane Cooper</p>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+                        <Link to="/Choosepayment" className="tf-list-item d-flex flex-column gap-8 align-items-center">
                             <img src="assets/images/avt/avt4.jpg" alt="img" className="box-round"/>
                             <p className="text-center">Wade Warren</p>
 
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+                        <Link to="/Choosepayment" className="tf-list-item d-flex flex-column gap-8 align-items-center">
                             <img src="assets/images/avt/avt5.jpg" alt="img" className="box-round"/>
                             <p className="text-center">Jenny Wilson</p>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+                        <Link to="/Choosepayment" className="tf-list-item d-flex flex-column gap-8 align-items-center">
                             <img src="assets/images/avt/avt6.jpg" alt="img" className="box-round"/>
                             <p className="text-center">Jenny Wilson</p>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="choose-payment.html" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+                        <Link to="/Choosepayment"  className="tf-list-item d-flex flex-column gap-8 align-items-center">
                             <img src="assets/images/avt/avt7.jpg" alt="img" className="box-round"/>
                             <p className="text-center">Robert Fox</p>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
