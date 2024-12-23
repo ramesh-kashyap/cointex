@@ -1,6 +1,7 @@
 import react ,{ useState } from "react";
 import Api from '../../Requests/Api';
-
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 export default function Register(){
     const[uname, setUname] = useState('');
     const[email, setEmail] = useState('');
@@ -60,7 +61,7 @@ export default function Register(){
                 <fieldset class="mt-16">
                     <label class="label-ip">
                         <p class="mb-8 text-small">Phone Number</p>
-                        <input type="text" placeholder="Phone number" name="phone" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+                        <PhoneInput type="text" placeholder="Phone number" name="phone"  country={"us"} value={phone} onChange={(e)=>setPhone(e.target.value)}/>
                     </label>
                 </fieldset>
                 <fieldset class="mt-16">
