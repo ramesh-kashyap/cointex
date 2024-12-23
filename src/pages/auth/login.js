@@ -1,19 +1,38 @@
-import { useState } from "react"
+import React, { useState } from "react";
 import Api2, { googleAuth } from '../../Requests/Api';
 import Api from '../../Requests/Api';
 import { useGoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
+import { BrowserRouter as Route, Router,Routes, Link } from 'react-router-dom';
+
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/newcss.css";
 
 export default function Login(){
     const navigate = useNavigate();
+    const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [passwordType, setPasswordType] = useState("password");
+    const [isActive, setIsActive] = useState(false);
 
-    const handleSubmit = async (e) =>{
+    const togglePasswordView = () => {
+        if (passwordType === "password") {
+            setPasswordType("text");
+            setIsActive(true);
+        } else {
+            setPasswordType("password");
+            setIsActive(false);
+        }
+    };
+
+
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
     try {
         const response = await Api.post('/api/login',{
-           email : email,
+           phone : phone,
            password: password,
         });
 
@@ -29,6 +48,7 @@ export default function Login(){
     }
 
     }
+
 
 const responseGoogle =async (authResult)=>{
     try{
@@ -65,45 +85,59 @@ const responseGoogle =async (authResult)=>{
       });
     return(
 <div>
-    {/* <div class="preload preload-container">
-        <div class="preload-logo" style={{backgroundImage: "url('images/logo/144.png')"}}>
-          <div class="spinner"></div>
+    {/* <div className="preload preload-container">
+        <div className="preload-logo" style={{backgroundImage: "url('images/logo/144.png')"}}>
+          <div className="spinner"></div>
         </div>
     </div> */}
-    <div class="header fixed-top bg-surface">
-        <a href="#" class="left back-btn"><i class="icon-left-btn"></i></a>
+    <div className="header fixed-top bg-surface">
+        <a href="#" className="left back-btn"><i className="icon-left-btn"></i></a>
     </div>
-    <div class="pt-45 pb-20">
-        <div class="tf-container">
-            <div class="mt-32">
-                <h2 class="text-center">Login Cointex</h2>
-                <ul class="mt-40 socials-login">
-                    <li class="mt-12"><button onClick={googleLogin} class="tf-btn md social dark"><img src="assets/images/coin/google.png" alt="img"/> Continue with Google</button></li>
+    <div className="pt-45 pb-20">
+        <div className="tf-container">
+            <div className="mt-32">
+                <h2 className="text-center">Login Cointex</h2>
+                <ul className="mt-40 socials-login">
+                    <li className="mt-12"><button onClick={googleLogin} className="tf-btn md social dark"><img src="assets/images/coin/google.png" alt="img"/> Continue with Google</button></li>
                 </ul>
             </div>
-            <div class="auth-line mt-12">Or</div>
-            <form action="home.html" class="mt-16">
-                <fieldset class="mt-16">
-                    <label class="label-ip">
-                        <p class="mb-8 text-small"> Email</p>
-                        <input type="text" placeholder="Example@gmail" name="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+            <div className="auth-line mt-12">Or</div>
+            <form action="home.html" className="mt-16">
+                <fieldset className="mt-16">
+                    <label className="label-ip">
+                        <p className="mb-8 text-small">Phone</p>
+
+                        < PhoneInput country={"us"} type="text" placeholder="Enter Your Mobile Number" name="phone" value={phone} enableSearch={true} onChange={(e)=>setPhone()} 
+                        inputStyle={{ padding: "10px",paddingLeft:"50px", fontSize: "14px" ,color:"white", backgroundColor:"#11150f"}} containerStyle={{backgroundColor:"#000"}} dropdownStyle={{backgroundColor:"#000"}}
+                        style={{
+    fontFamily: "'Poppins', sans-serif",
+    width: "100%",
+    border: "1px solid transparent",
+    fontSize: "16px",
+    fontWeight: 400,
+    lineHeight: "26px",
+    // padding: "12px 16px",
+    borderRadius: "8px",
+    color: "var(--white)",
+    backgroundColor: "var(--menuDark)",
+  }}/>
                     </label>
                 </fieldset>
-                <fieldset class="mt-16 mb-12">
-                    <label class="label-ip">
-                        <p class="mb-8 text-small">Password</p>
-                        <div class="box-auth-pass">
-                            <input type="password" required placeholder="Your password" class="password-field" name="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
-                            <span class="show-pass">
-                                <i class="icon-view"></i>
-                                <i class="icon-view-hide"></i>
+                <fieldset className="mt-16 mb-12">
+                    <label className="label-ip">
+                        <p className="mb-8 text-small">Password</p>
+                        <div className="box-auth-pass">
+                            <input type={passwordType} required placeholder="Your password" className="password-field" name="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                            <span className={`show-pass ${isActive ? "active" : ""}`} onClick={togglePasswordView}>
+                                <i className="icon-view"></i>
+                                <i className="icon-view-hide"></i>
                             </span>
                         </div>
                     </label>
                 </fieldset>
-                <a href="reset-pass.html" class="text-secondary">Forgot Password?</a>
-                <button class="mt-20" type="submit" onSubmit={handleSubmit}>Login</button>
-                <p class="mt-20 text-center text-small">Already have a Account? &ensp;<a href="register.html">Sign up</a></p>
+                <a href="" className="text-secondary">Forgot Password?</a>
+                <button className="mt-20" type="submit" onSubmit={handleSubmit}>Login</button>
+                <p className="mt-20 text-center text-small">Already have a Account? &ensp;<Link to="/register">Sign up</Link></p>
             </form>
         </div>
     </div>
