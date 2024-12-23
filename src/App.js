@@ -9,6 +9,8 @@ import Choosepayment from './pages/wallet/Choosepayment';
 import Buyquantity from './pages/wallet/Buyquantity';
 import Qrcode from './pages/wallet/Qrcode';
 import Userinfo from './pages/profile/Userinfo';
+import Recharge from './pages/wallet/Recharge';
+
 
 
 
@@ -23,6 +25,8 @@ function App() {
          <Routes>
            <Route path="/" element={<Dashboard/>}/>
            <Route path="/wallet" element={<Wallet/>}></Route>
+           <Route path="/Recharge" element={<Recharge/>}></Route>
+
            <Route path="/Userinfo" element={<Userinfo/>}></Route>
 
            <Route path="/Choosepayment" element={<Choosepayment/>}></Route>
