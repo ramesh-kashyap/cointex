@@ -36,12 +36,8 @@ function App() {
   
   return (   
     <Router>
-         <Routes>
-           <Route path="/" element={<Dashboard/>}/>
-           <Route path="/wallet" element={<Wallet/>}></Route>
-           <Route path="/Recharge" element={<Recharge/>}></Route>
-
-           <Route path="/Userinfo" element={<Userinfo/>}></Route>
+         
+           
     <Routes>
       {/* Home Routes */}
       <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
@@ -56,6 +52,7 @@ function App() {
       <Route path="/Cryptocurrency" element={<ProtectedRoute><Cryptocurrency /></ProtectedRoute>} />
 
       {/* Profile Routes */}
+      <Route path="/Recharge" element={<Recharge/>}></Route>
       <Route path="/Userinfo" element={<ProtectedRoute><Userinfo /></ProtectedRoute>} />
       <Route path="/listblog" element={<ProtectedRoute><Listblog /></ProtectedRoute>} />
       <Route path="/blog-details" element={<ProtectedRoute><Blogdetails /></ProtectedRoute>} />
