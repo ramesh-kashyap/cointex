@@ -15,7 +15,8 @@ import {  GoogleAuthWrapperRegister,GoogleAuthWrapper,isAuthenticated, Protected
 // profile
 import Listblog from './pages/profile/bloglist';
 import Userinfo from './pages/profile/Userinfo';
-import Blogdetails from './pages/profile/blogdetails';
+import Recharge from './pages/wallet/Recharge';
+
 
 
 
@@ -34,11 +35,12 @@ function App() {
   
   return (   
     <Router>
-    <Routes>
-      {/* Home Routes */}
-      <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-      <Route path="/exchange" element={<ProtectedRoute><Exchange /></ProtectedRoute>} />
-      <Route path="/earn" element={<ProtectedRoute><Earn /></ProtectedRoute>} />
+         <Routes>
+           <Route path="/" element={<Dashboard/>}/>
+           <Route path="/wallet" element={<Wallet/>}></Route>
+           <Route path="/Recharge" element={<Recharge/>}></Route>
+
+           <Route path="/Userinfo" element={<Userinfo/>}></Route>
 
       {/* Wallet Routes */}
       <Route path="/wallet" element={<ProtectedRoute><Wallet /></ProtectedRoute>} />
