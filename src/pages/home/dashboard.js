@@ -25,9 +25,9 @@ return (
       </div>
     </div>
     <div className="d-flex align-items-center gap-8">
-        <Link to="/listblog">
-        <a href="list-blog.html" className="icon-gift"></a>
-        </Link>      
+       
+        <Link href="/listblog" className="icon-gift"></Link>
+           
       <a href="#notification" className="icon-noti box-noti" data-bs-toggle="modal"></a>
     </div>
   </div>
