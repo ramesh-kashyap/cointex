@@ -1,7 +1,11 @@
 import { useState } from "react"
+import Api2, { googleAuth } from '../../Requests/Api';
 import Api from '../../Requests/Api';
+import { useGoogleLogin } from '@react-oauth/google';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login(){
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -25,6 +29,40 @@ export default function Login(){
     }
 
     }
+
+const responseGoogle =async (authResult)=>{
+    try{
+        console.log(authResult);
+        if(authResult['code']){
+            const result = await googleAuth(authResult['code']); 
+            console.log(result.data);
+            // Extract user information from the result (assuming the backend returns this)
+            const { name, email, picture } = result.data.user;
+
+            // Log the user information
+            console.log(`User's Name: ${name}`);
+            console.log(`User's Email: ${email}`);
+            console.log(`User's Profile Image: ${picture}`);
+
+            localStorage.setItem('authToken', result.data.token);
+
+            // Redirect to dashboard
+            navigate('/');
+       
+        }else {
+            // If there's no authorization code, handle the error
+            console.error('Authorization code not received');
+        }
+    }catch(err){
+        console.error('Error while requesting google code:', err);
+    }
+}
+
+    const googleLogin= useGoogleLogin({
+        onSuccess: responseGoogle,
+        onError: responseGoogle,
+        flow: 'auth-code',
+      });
     return(
 <div>
     {/* <div class="preload preload-container">
@@ -40,7 +78,7 @@ export default function Login(){
             <div class="mt-32">
                 <h2 class="text-center">Login Cointex</h2>
                 <ul class="mt-40 socials-login">
-                    <li class="mt-12"><a href="home.html" class="tf-btn md social dark"><img src="assets/images/coin/google.png" alt="img"/> Continue with Google</a></li>
+                    <li class="mt-12"><button onClick={googleLogin} class="tf-btn md social dark"><img src="assets/images/coin/google.png" alt="img"/> Continue with Google</button></li>
                 </ul>
             </div>
             <div class="auth-line mt-12">Or</div>
