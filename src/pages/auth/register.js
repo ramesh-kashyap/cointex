@@ -6,32 +6,33 @@ import Api2, { googleAuth } from '../../Requests/Api';
 export default function Register(){
     const navigate = useNavigate();
     const[uname, setUname] = useState('');
-    const[email, setEmail] = useState('');
+    // const[email, setEmail] = useState('');
     const[phone, setPhone] = useState('');
     const[password, setPassword] = useState('');
     const[cpassword, setCpassword] = useState('');
-
+    const[refferal, setRefferal] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState({});
     const formSubmit = async (e) => {
         e.preventDefault();
-        try{
-            const response = await Api.post('/api/register',{
-             name: uname,
-             email: email,
-             phone: phone,
-             password: password,
-             cpassword: cpassword,
-            });
-
-            if(response.data.status){
-                console.log('Reagetr Sucess');
-            }
-            else{
-                console.error(response.data.message);
-            }
-
+        const payload = { name: uname, phone, password, referralCode: refferal };
+            
+        try {
+            setLoading(true);
+            const response = await Api.post('/register', payload); // Make API request
+            console.log('Registration successful:', response.data);
+            // Save token or handle successful registration
+            localStorage.setItem('authToken', response.data.token);
+            alert('Registration successful!');
+        } catch (error) {
+            console.error('Registration failed:', error.response?.data);
+            setErrors(error.response?.data?.errors || { general: 'An error occurred' });
+        } finally {
+            setLoading(false);
         }
-        catch(error){
-              console.error('Your Data not Submit Error in Registration !')
+        if (password !== cpassword) {
+            alert('Passwords do not match!');
+            return;
         }
     }
 const responseGoogle =async (authResult)=>{
@@ -39,6 +40,7 @@ const responseGoogle =async (authResult)=>{
         console.log(authResult);
         if(authResult['code']){
             const result = await googleAuth(authResult['code']); 
+            
             console.log(result.data);
             // Extract user information from the result (assuming the backend returns this)
             const { name, email, picture } = result.data.user;
@@ -74,7 +76,7 @@ const responseGoogle =async (authResult)=>{
     <div class="pt-45">
         <div class="tf-container">
 
-            <form action="otp.html" class="mt-32 mb-16">
+            <form onSubmit={formSubmit} class="mt-32 mb-16">
                 <h2 class="text-center">Register Cointex</h2>
 
                 <ul class="mt-40 socials-login">
@@ -86,12 +88,12 @@ const responseGoogle =async (authResult)=>{
                         <input type="text" name="name" value={uname} onChange={(e) =>setUname(e.target.value)}/>
                     </label>
                 </fieldset>
-                <fieldset class="mt-16">
+                {/* <fieldset class="mt-16">
                     <label class="label-ip">
                         <p class="mb-8 text-small">Email</p>
                         <input type="text" placeholder="Example@gmail" name="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                     </label>
-                </fieldset>
+                </fieldset> */}
                 <fieldset class="mt-16">
                     <label class="label-ip">
                         <p class="mb-8 text-small">Phone Number</p>
@@ -122,11 +124,22 @@ const responseGoogle =async (authResult)=>{
                         </div>
                     </label>
                 </fieldset>
+
+                <fieldset class="mt-16">
+                    <label class="label-ip">
+                        <p class="mb-8 text-small">Referral Code</p>
+                        <div class="box-auth-pass">
+                            <input type="text" required placeholder="Referral Code" name="refferal" class="password-field2" value={refferal} onChange={(e)=>setRefferal(e.target.value)}/>
+                            
+                        </div>
+                    </label>
+                </fieldset>
+                
                 <fieldset class="group-cb cb-signup mt-12">
                     <input type="checkbox" class="tf-checkbox" id="cb-ip" checked/> 
                     <label for="cb-ip">I agree to <span class="text-white">Terms and condition</span></label>
                 </fieldset>
-                <button class="mt-40" type="submit" onSubmit={formSubmit}>Create an account</button>
+                <button class="mt-40" type="submit" >Create an account</button>
             </form>
             
         </div>
