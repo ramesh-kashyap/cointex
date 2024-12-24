@@ -9,6 +9,7 @@ import Cryptocurrency from './pages/wallet/Cryptocurrency';
 import Choosepayment from './pages/wallet/Choosepayment';
 import Buyquantity from './pages/wallet/Buyquantity';
 import Qrcode from './pages/wallet/Qrcode';
+import Recharge from './pages/wallet/Recharge';
 
 
 import {  GoogleAuthWrapperRegister,GoogleAuthWrapper,isAuthenticated, ProtectedRoute, PublicRoute } from './Helper/helper';
@@ -29,6 +30,11 @@ import Earn from './pages/activity/earn';
 import Login from './pages/auth/login';
 import Register from './pages/auth/register';
 import Forgot from './pages/auth/forgot';
+import Newpass from './pages/auth/newpass';
+import Otp from './pages/auth/Otp';
+
+
+
 
 function App() {
 
@@ -56,12 +62,17 @@ function App() {
       <Route path="/listblog" element={<ProtectedRoute><Listblog/></ProtectedRoute>} />
       <Route path="/blog-details" element={<ProtectedRoute><Blogdetails /></ProtectedRoute>} />
 
-      {/* Auth Routes */}
-      <Route path="/login" element={<PublicRoute><GoogleAuthWrapper /></PublicRoute>} />
-      <Route path="/register" element={<PublicRoute><GoogleAuthWrapperRegister /></PublicRoute>} />
-      <Route path="/forgot" element={<PublicRoute><Forgot /></PublicRoute>} />
-    </Routes>
-  </Router>
+
+            {/* auth */}
+           <Route path="/login" element={<Login/>}></Route>
+           <Route path="/register" element={<Register/>}/>
+           <Route path="/forgot" element={<Forgot/>}/>
+           <Route path="/Newpass" element={<Newpass/>}/>
+           <Route path="/Otp" element={<Otp/>}/>
+
+
+         </Routes>
+       </Router> 
   );
 }
 
