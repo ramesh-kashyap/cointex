@@ -1,77 +1,108 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode'; // Correct
+import Api from '../../Requests/Api';
+const OTPForm = () => {
+    const navigate = useNavigate();
+    const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+    const [message, setMessage] = useState("");
+    const [loading, setLoading] = useState(false);
 
-export default function Otp() {
+    // Handle input change for each OTP box
+    const handleChange = (e, index) => {
+        const { value } = e.target;
+
+        if (/^[0-9]?$/.test(value)) {
+            const newOtp = [...otp];
+            newOtp[index] = value;
+            setOtp(newOtp);
+
+            // Move to the next input box
+            if (value && index < otp.length - 1) {
+                document.getElementById(`digit-${index + 2}`).focus();
+            }
+        }
+    };
+
+    // Handle backspace navigation
+    const handleKeyDown = (e, index) => {
+        if (e.key === "Backspace" && !otp[index] && index > 0) {
+            document.getElementById(`digit-${index}`).focus();
+        }
+    };
+
+    // Submit the OTP to the API
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const code = otp.join(""); // Combine the OTP inputs
+
+        if (code.length !== 6) {
+            setMessage("Please enter a 6-digit OTP");
+            return;
+        }
+
+        setLoading(true);
+        setMessage("");
+        const token = localStorage.getItem('authToken');
+        
+            const decoded = jwtDecode(token);
+            const userId = decoded.userId;       
+     
+
+        try {
+            const payload = {otp: code, userId };
+        
+            const response = await Api.post('/verify-otp', payload);
+            setMessage(response.data.message || "OTP verified successfully!");
+           if(response){
+            navigate('/');
+           }
+        } catch (error) {
+            setMessage(error.response?.data?.message || "Failed to verify OTP. Please try again.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <div>
-          
             <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
-                <a href="#" className="left back-btn">
-                    <i className="icon-left-btn"></i>
-                </a>
-                <h3>OTP</h3>
+                <h3>OTP Verification</h3>
             </div>
 
-            {/* Main Content */}
             <div className="pt-45 pb-20">
                 <div className="tf-container">
-                    <form className="mt-32">
-                        {/* OTP Input Fields */}
+                    <form className="mt-32" onSubmit={handleSubmit}>
                         <div className="digit-group mt-12">
-                            <input
-                                required
-                                type="text"
-                                id="digit-2"
-                                name="digit-2"
-                                data-next="digit-3"
-                                data-previous="digit-1"
-                                defaultValue="3"
-                            />
-                            <input
-                                required
-                                type="text"
-                                id="digit-3"
-                                name="digit-3"
-                                data-next="digit-4"
-                                data-previous="digit-2"
-                                defaultValue="6"
-                            />
-                            <input
-                                required
-                                type="text"
-                                id="digit-4"
-                                name="digit-4"
-                                data-next="digit-5"
-                                data-previous="digit-3"
-                            />
-                            <input
-                                required
-                                type="text"
-                                id="digit-5"
-                                name="digit-5"
-                                data-next="digit-6"
-                                data-previous="digit-4"
-                            />
+                            {otp.map((digit, index) => (
+                                <input
+                                    key={index}
+                                    id={`digit-${index + 1}`}
+                                    type="text"
+                                    maxLength="1"
+                                    value={digit}
+                                    onChange={(e) => handleChange(e, index)}
+                                    onKeyDown={(e) => handleKeyDown(e, index)}
+                                    required
+                                    autoFocus={index === 0}
+                                />
+                            ))}
                         </div>
-                        <p className="text-center text-small text-white mt-16">
-                            A code has been sent to your phone
-                        </p>
-                        <p className="d-flex justify-content-center mt-4 text-center text-button text-primary fw-6">
-                            Resend in&nbsp;
-                            <span
-                                className="js-countdown"
-                                data-timer="60"
-                                data-labels=" :  ,  : , : , "
-                            ></span>
-                        </p>
-                        <a
-                            href="info-received.html"
+
+                        {message && <p className="text-center mt-4">{message}</p>}
+
+                        <button
+                            type="submit"
                             className="mt-40 tf-btn lg primary"
+                            disabled={loading}
                         >
-                            confirm
-                        </a>
+                            {loading ? "Verifying..." : "Confirm"}
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     );
-}
+};
+
+export default OTPForm;
