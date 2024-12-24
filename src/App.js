@@ -39,6 +39,8 @@ import Register from './pages/auth/register';
 import Forgot from './pages/auth/forgot';
 import Newpass from './pages/auth/newpass';
 import Otp from './pages/auth/Otp';
+import Successfullypass from './pages/auth/Successfullypass';
+
 
 function App() {
 
