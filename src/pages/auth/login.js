@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { BrowserRouter as Route, Router,Routes, Link } from 'react-router-dom';
 
 import PhoneInput from "react-phone-input-2";
-// import "react-phone-input-2/lib/newcss.css";
+import "react-phone-input-2/lib/newcss.css";
 
 export default function Login(){
     const navigate = useNavigate();
