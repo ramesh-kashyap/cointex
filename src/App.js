@@ -47,14 +47,14 @@ function App() {
       {/* Wallet Routes */}
       <Route path="/wallet" element={<ProtectedRoute><Wallet /></ProtectedRoute>} />
       <Route path="/Choosepayment" element={<ProtectedRoute><Choosepayment /></ProtectedRoute>} />
-      <Route path="/Buyquantity" element={<ProtectedRoute><Buyquantity /></ProtectedRoute>} />
-      <Route path="/Qrcode" element={<ProtectedRoute><Qrcode /></ProtectedRoute>} />
+      <Route path="/Buyquantity" element={<ProtectedRoute><Buyquantity/></ProtectedRoute>} />
+      <Route path="/Qrcode" element={<ProtectedRoute><Qrcode/></ProtectedRoute>}/>
       <Route path="/Cryptocurrency" element={<ProtectedRoute><Cryptocurrency /></ProtectedRoute>} />
 
       {/* Profile Routes */}
       <Route path="/Recharge" element={<Recharge/>}></Route>
-      <Route path="/Userinfo" element={<ProtectedRoute><Userinfo /></ProtectedRoute>} />
-      <Route path="/listblog" element={<ProtectedRoute><Listblog /></ProtectedRoute>} />
+      <Route path="/Userinfo" element={<ProtectedRoute><Userinfo/></ProtectedRoute>} />
+      <Route path="/listblog" element={<ProtectedRoute><Listblog/></ProtectedRoute>} />
       <Route path="/blog-details" element={<ProtectedRoute><Blogdetails /></ProtectedRoute>} />
 
       {/* Auth Routes */}
