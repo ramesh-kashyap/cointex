@@ -41,26 +41,32 @@ function App() {
   
   return (   
     <Router>
-         
+         <Routes>
+          {/* home */}
+
+           <Route path="/" element={<Dashboard/>}/>
+           <Route path="/exchange" element={<Exchange/>}></Route>
+           <Route path="/earn" element={<Earn/>}></Route>
+
            
-    <Routes>
-      {/* Home Routes */}
-      <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-      <Route path="/exchange" element={<ProtectedRoute><Exchange /></ProtectedRoute>} />
-      <Route path="/earn" element={<ProtectedRoute><Earn /></ProtectedRoute>} />
+           {/* wallet */}
 
-      {/* Wallet Routes */}
-      <Route path="/wallet" element={<ProtectedRoute><Wallet /></ProtectedRoute>} />
-      <Route path="/Choosepayment" element={<ProtectedRoute><Choosepayment /></ProtectedRoute>} />
-      <Route path="/Buyquantity" element={<ProtectedRoute><Buyquantity/></ProtectedRoute>} />
-      <Route path="/Qrcode" element={<ProtectedRoute><Qrcode/></ProtectedRoute>}/>
-      <Route path="/Cryptocurrency" element={<ProtectedRoute><Cryptocurrency /></ProtectedRoute>} />
+           <Route path="/wallet" element={<Wallet/>}></Route>
+           <Route path="/Recharge" element={<Recharge/>}></Route>
 
-      {/* Profile Routes */}
-      <Route path="/Recharge" element={<Recharge/>}></Route>
-      <Route path="/Userinfo" element={<ProtectedRoute><Userinfo/></ProtectedRoute>} />
-      <Route path="/listblog" element={<ProtectedRoute><Listblog/></ProtectedRoute>} />
-      <Route path="/blog-details" element={<ProtectedRoute><Blogdetails /></ProtectedRoute>} />
+           <Route path="/Userinfo" element={<Userinfo/>}></Route>
+           
+
+           <Route path="/Choosepayment" element={<Choosepayment/>}></Route>
+           <Route path="/Buyquantity" element={<Buyquantity/>}></Route>
+           <Route path="/Qrcode" element={<Qrcode/>}></Route>
+           <Route path="/Cryptocurrency" element={<Cryptocurrency/>}></Route>
+
+
+           {/* profile */}
+           <Route path="/Userinfo" element={<Userinfo/>}></Route>      
+           <Route path="/listblog" element={<Listblog/>}/>
+           <Route path="/blog-details" element={<Blogdetails/>}/>
 
 
             {/* auth */}
