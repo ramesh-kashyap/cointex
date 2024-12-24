@@ -46,6 +46,8 @@ function App() {
            <Route path="/" element={<Dashboard/>}/>
            <Route path="/exchange" element={<Exchange/>}></Route>
            <Route path="/earn" element={<Earn/>}></Route>
+
+           
            {/* wallet */}
 
            <Route path="/wallet" element={<Wallet/>}></Route>

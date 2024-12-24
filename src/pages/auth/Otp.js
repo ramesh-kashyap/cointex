@@ -67,7 +67,7 @@ export default function Otp() {
                             href="info-received.html"
                             className="mt-40 tf-btn lg primary"
                         >
-                            Confirm
+                            confirm
                         </a>
                     </form>
                 </div>
