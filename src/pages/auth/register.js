@@ -139,7 +139,7 @@ const responseGoogle =async (authResult)=>{
                     <input type="checkbox" class="tf-checkbox" id="cb-ip" checked/> 
                     <label for="cb-ip">I agree to <span class="text-white">Terms and condition</span></label>
                 </fieldset>
-                <button class="mt-40" type="submit" >Create an account</button>
+                <button class="mt-40" type="submit" >Create an accoun</button>
             </form>
             
         </div>
