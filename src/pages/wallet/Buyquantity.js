@@ -12,7 +12,7 @@ export default function BuyQuantity() {
         <a href="javascript:void(0);" className="left back-btn">
           <i className="icon-left-btn"></i>
         </a>
-        <a href="sell-quantity.html" className="right">Sell</a>
+        <a href="sell-quantity.html" className="right">Sells</a>
       </div>
 
       <div className="pt-45 pb-16">
