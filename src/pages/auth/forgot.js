@@ -1,18 +1,22 @@
 
 import React ,{useState} from "react";
 import Api from '../../Requests/Api';
+import { useNavigate } from 'react-router-dom';
 
 export default function Forgot(){
-const [email, setEmail] = useState('');
+  const navigate = useNavigate();
+const [phone, setPhone] = useState('');
     
 const submitForm = async (e) =>{
   e.preventDefault();
   try{
-      const response = await Api.post('/api/forgot',{
-        email:email,
+      const response = await Api.post('/forget',{
+        phone:phone,
       });
-      if(response){
-        console.log('error in forgot');
+      // console.log(response);
+      if(response.data){
+        localStorage.setItem('phone', phone);
+        navigate('/reset');        
       }
       else{
         console.error(response.data.message);
@@ -59,12 +63,12 @@ const submitForm = async (e) =>{
                   Free Stock
                 </a>
             </div>
-            <form action="new-pass.html" className="mt-60 mb-16">
+            <form action="" className="mt-60 mb-16">
               <h2 className="mt-60 text-center">Reset Password</h2>
               <fieldset className="mt-40">
                 <label className="label-ip">
-                    <p className="mb-8 text-small">Email/PhoneNumber</p>
-                    <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                    <p className="mb-8 text-small">Phone</p>
+                    <input type="text" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
                 </label>
               </fieldset>
               <button className="mt-40" type="submit" onClick={submitForm}>Next</button>

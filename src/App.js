@@ -62,9 +62,9 @@ function App() {
       {/* Auth Routes */}
       <Route path="/login" element={<PublicRoute><GoogleAuthWrapper /></PublicRoute>} />
       <Route path="/register" element={<PublicRoute><GoogleAuthWrapperRegister /></PublicRoute>} />
-      <Route path="/forgot" element={<PublicRoute><Forgot /></PublicRoute>} />
-      <Route path="/Newpass" element={<PublicRoute><Newpass/></PublicRoute>}/>
-      <Route path="/Otp" element={<PublicRoute><Otp/></PublicRoute>}/>
+      <Route path="/forget" element={<PublicRoute><Forgot/></PublicRoute>} />
+      <Route path="/reset" element={<PublicRoute><Newpass/></PublicRoute>}/>
+      <Route path="/sendotp" element={<PublicRoute><Otp/></PublicRoute>}/>
     </Routes>
   </Router>
   );
