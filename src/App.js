@@ -64,7 +64,7 @@ function App() {
       <Route path="/register" element={<PublicRoute><GoogleAuthWrapperRegister /></PublicRoute>} />
       <Route path="/forgot" element={<PublicRoute><Forgot /></PublicRoute>} />
       <Route path="/Newpass" element={<PublicRoute><Newpass/></PublicRoute>}/>
-      <Route path="/Otp" element={<PublicRoute><Otp/></PublicRoute>}/>
+      <Route path="/Otp" element={<ProtectedRoute><Otp/></ProtectedRoute>}/>
     </Routes>
   </Router>
   );
