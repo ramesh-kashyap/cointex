@@ -9,6 +9,7 @@ import Cryptocurrency from './pages/wallet/Cryptocurrency';
 import Choosepayment from './pages/wallet/Choosepayment';
 import Buyquantity from './pages/wallet/Buyquantity';
 import Qrcode from './pages/wallet/Qrcode';
+import Recharge from './pages/wallet/Recharge';
 
 
 
@@ -28,6 +29,11 @@ import Earn from './pages/activity/earn';
 import Login from './pages/auth/login';
 import Register from './pages/auth/register';
 import Forgot from './pages/auth/forgot';
+import Newpass from './pages/auth/newpass';
+import Otp from './pages/auth/Otp';
+
+
+
 
 function App() {
   return (   
@@ -62,6 +68,10 @@ function App() {
            <Route path="/login" element={<Login/>}></Route>
            <Route path="/register" element={<Register/>}/>
            <Route path="/forgot" element={<Forgot/>}/>
+           <Route path="/Newpass" element={<Newpass/>}/>
+           <Route path="/Otp" element={<Otp/>}/>
+
+
          </Routes>
        </Router> 
   );
