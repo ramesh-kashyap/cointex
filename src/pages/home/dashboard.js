@@ -47,7 +47,7 @@ return (
     </h1>
     <ul className="mt-16 grid-4 m--16">
       <li>
-        <Link  to="/Choosepayment" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+        <Link  to="/Deposit" className="tf-list-item d-flex flex-column gap-8 align-items-center">
           <span className="box-round bg-surface d-flex justify-content-center align-items-center">
             <i className="icon icon-way"></i>
           </span>
@@ -55,7 +55,7 @@ return (
         </Link>
       </li>
       <li>
-        <Link to="/Qrcode" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+        <Link to="/Withdraw" className="tf-list-item d-flex flex-column gap-8 align-items-center">
           <span className="box-round bg-surface d-flex justify-content-center align-items-center">
             <i className="icon icon-way2"></i>
           </span>
@@ -73,7 +73,7 @@ return (
         </Link>
       </li>
       <li>
-        <Link to="/earn" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+        <Link to="/Cointex-Store" className="tf-list-item d-flex flex-column gap-8 align-items-center">
           <span className="box-round bg-surface d-flex justify-content-center align-items-center">
             <i className="icon icon-exchange"></i>
           </span>

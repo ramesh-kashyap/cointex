@@ -3,16 +3,42 @@ import Api from '../../Requests/Api';
 import { useGoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 import Api2, { googleAuth } from '../../Requests/Api';
+
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/newcss.css";
+ 
 export default function Register(){
     const navigate = useNavigate();
     const[uname, setUname] = useState('');
     // const[email, setEmail] = useState('');
+    const [isActive, setIsActive] = useState(false);
+    const [isActive2, setIsActive2] = useState(false);
     const[phone, setPhone] = useState('');
     const[password, setPassword] = useState('');
     const[cpassword, setCpassword] = useState('');
     const[refferal, setRefferal] = useState('');
     const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({});
+    const [passwordType, setPasswordType] = useState("password");
+    const [passwordType2, setPasswordType2] = useState("password");
+    const togglePasswordView = () => {
+        if (passwordType === "password") {
+            setPasswordType("text");
+            setIsActive(true);
+        } else {
+            setPasswordType("password");
+            setIsActive(false);
+        }
+    };
+    const togglePasswordView2 = () => {
+        if (passwordType2 === "password") {
+            setPasswordType2("text");
+            setIsActive2(true);
+        } else {
+            setPasswordType2("password");
+            setIsActive2(false);
+        }
+    };
     const formSubmit = async (e) => {
         e.preventDefault();
         const payload = { name: uname, phone, password, referralCode: refferal };
@@ -22,8 +48,9 @@ export default function Register(){
             const response = await Api.post('/register', payload); // Make API request
             console.log('Registration successful:', response.data);
             // Save token or handle successful registration
-            localStorage.setItem('authToken', response.data.token);
-            alert('Registration successful!');
+            localStorage.setItem('isRegistered', 'true');
+            sessionStorage.setItem('phone', phone);
+            navigate('/Otp');
         } catch (error) {
             console.error('Registration failed:', error.response?.data);
             setErrors(error.response?.data?.errors || { general: 'An error occurred' });
@@ -97,17 +124,31 @@ const responseGoogle =async (authResult)=>{
                 <fieldset class="mt-16">
                     <label class="label-ip">
                         <p class="mb-8 text-small">Phone Number</p>
-                        <input type="text" placeholder="Phone number" name="phone" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+                       
+                        < PhoneInput  international type="text" placeholder="Enter Your Mobile Number" name="phone" value={phone} enableSearch={true}  onChange={(value) => setPhone(value)}  
+                        inputStyle={{ padding: "10px",paddingLeft:"50px", fontSize: "14px" ,color:"white", backgroundColor:"#11150f"}} containerStyle={{backgroundColor:"#000"}} dropdownStyle={{backgroundColor:"#000"}}
+                        style={{
+    fontFamily: "'Poppins', sans-serif",
+    width: "100%",
+    border: "1px solid transparent",
+    fontSize: "16px",
+    fontWeight: 400,
+    lineHeight: "26px",
+    // padding: "12px 16px",
+    borderRadius: "8px",
+    color: "var(--white)",
+    backgroundColor: "var(--menuDark)",
+  }}/>
                     </label>
                 </fieldset>
                 <fieldset class="mt-16">
                     <label class="label-ip">
                         <p class="mb-8 text-small">Password</p>
                         <div class="box-auth-pass">
-                            <input type="password" required placeholder="6 -20 characters" class="password-field" name="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
-                            <span class="show-pass">
-                                <i class="icon-view"></i>
-                                <i class="icon-view-hide"></i>
+                            <input type={passwordType} required placeholder="6 -20 characters" class="password-field" name="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                            <span className={`show-pass ${isActive ? "active" : ""}`} onClick={togglePasswordView}>
+                                <i className="icon-view"></i>
+                                <i className="icon-view-hide"></i>
                             </span>
                         </div>
                     </label>
@@ -116,10 +157,10 @@ const responseGoogle =async (authResult)=>{
                     <label class="label-ip">
                         <p class="mb-8 text-small">Confirm Password</p>
                         <div class="box-auth-pass">
-                            <input type="password" required placeholder="confirm password" name="confirm password" class="password-field2" value={cpassword} onChange={(e)=>setCpassword(e.target.value)}/>
-                            <span class="show-pass2">
-                                <i class="icon-view"></i>
-                                <i class="icon-view-hide"></i>
+                            <input type={passwordType2} required placeholder="confirm password" name="confirm password" class="password-field2" value={cpassword} onChange={(e)=>setCpassword(e.target.value)}/>
+                            <span className={`show-pass2 ${isActive2 ? "active" : ""}`} onClick={togglePasswordView2}>
+                                <i className="icon-view"></i>
+                                <i className="icon-view-hide"></i>
                             </span>
                         </div>
                     </label>
