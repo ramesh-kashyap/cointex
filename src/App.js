@@ -11,9 +11,14 @@ import Buyquantity from './pages/wallet/Buyquantity';
 import Withdraw from './pages/wallet/Withdraw';
 
 import Qrcode from './pages/wallet/Qrcode';
+import Apibind from './pages/wallet/ApiBind';
+import Withdraw from './pages/wallet/Withdraw';
+import Deposit from './pages/wallet/Deposit';
+import Bindlist from './pages/wallet/Bindlist';
+import Cointexstore from './pages/plan/Cointexstore';
 
 
-import {  GoogleAuthWrapperRegister,GoogleAuthWrapper,isAuthenticated, ProtectedRoute, PublicRoute } from './Helper/helper';
+import {  GoogleAuthWrapperRegister,GoogleAuthWrapper,ProtecRegRoute,isAuthenticated, ProtectedRoute, PublicRoute } from './Helper/helper';
 // profile
 import Listblog from './pages/profile/bloglist';
 import Userinfo from './pages/profile/Userinfo';
@@ -56,19 +61,24 @@ function App() {
       <Route path="/Buyquantity" element={<ProtectedRoute><Buyquantity /></ProtectedRoute>} />
       <Route path="/Qrcode" element={<ProtectedRoute><Qrcode /></ProtectedRoute>} />
       <Route path="/Cryptocurrency" element={<ProtectedRoute><Cryptocurrency /></ProtectedRoute>} />
-
+      <Route path="/Api-Bind" element={<ProtectedRoute><Apibind /></ProtectedRoute>} />
       {/* Profile Routes */}
       <Route path="/Recharge" element={<Recharge/>}></Route>
       <Route path="/Userinfo" element={<ProtectedRoute><Userinfo /></ProtectedRoute>} />
       <Route path="/listblog" element={<ProtectedRoute><Listblog /></ProtectedRoute>} />
       <Route path="/blog-details" element={<ProtectedRoute><Blogdetails /></ProtectedRoute>} />
+      <Route path="/Deposit" element={<ProtectedRoute><Deposit /></ProtectedRoute>} />
+      <Route path="/Withdraw" element={<ProtectedRoute><Withdraw /></ProtectedRoute>} />
+      <Route path="/Bind-List" element={<ProtectedRoute><Bindlist /></ProtectedRoute>} />
+
+      <Route path="/Cointex-Store" element={<ProtectedRoute><Cointexstore /></ProtectedRoute>} />
 
       {/* Auth Routes */}
       <Route path="/login" element={<PublicRoute><GoogleAuthWrapper /></PublicRoute>} />
       <Route path="/register" element={<PublicRoute><GoogleAuthWrapperRegister /></PublicRoute>} />
       <Route path="/forgot" element={<PublicRoute><Forgot /></PublicRoute>} />
       <Route path="/Newpass" element={<PublicRoute><Newpass/></PublicRoute>}/>
-      <Route path="/Otp" element={<ProtectedRoute><Otp/></ProtectedRoute>}/>
+      <Route path="/Otp" element={<ProtecRegRoute><Otp/></ProtecRegRoute>}/>
     </Routes>
   </Router>
   );

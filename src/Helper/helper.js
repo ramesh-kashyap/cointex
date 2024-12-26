@@ -37,6 +37,18 @@ export const ProtectedRoute = ({ children }) => {
     return isAuthenticated() ? children : <Navigate to="/login" />;
 };
 
+export const ProtecRegRoute = ({ children }) => {
+    // Check if the user has completed registration (via localStorage or sessionStorage)
+    const isRegistered = localStorage.getItem('isRegistered');  // Flag indicating if user is registered
+  
+    if (!isRegistered) {
+      // If not registered, redirect to the /register page
+      return <Navigate to="/register" replace />;
+    }
+  
+    // If the user is registered, allow access to the children (protected routes)
+    return children;
+  };
 // Public Route Component
 export const PublicRoute = ({ children }) => {
     return isAuthenticated() ? <Navigate to="/" /> : children;

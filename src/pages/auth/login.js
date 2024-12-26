@@ -29,28 +29,32 @@ export default function Login(){
 
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault('Phone :', phone);
+        console.log('error accur');
     try {
-        const response = await Api.post('/api/login',{
+        const response = await Api.post('/login',{
            phone : phone,
            password: password,
         });
 
         if(response.data.status){
-            console.log('error accur');
+            console.log('error accur:',response.data.status);
         }
         else{
             console.error(response.data.message);
+            localStorage.setItem('authToken', response.data.token);
+            navigate('/');
         }
     }
-    catch{
-        console.error('An error occurred during the API request');
+    catch(error){
+        console.error('Error during login:', error.response || error.message || error);
+        alert('An error occurred during the API request');
     }
 
     }
 
 
-const responseGoogle =async (authResult)=>{
+const responseGoogle = async (authResult)=>{
     try{
         console.log(authResult);
         if(authResult['code']){
@@ -102,12 +106,12 @@ const responseGoogle =async (authResult)=>{
                 </ul>
             </div>
             <div className="auth-line mt-12">Or</div>
-            <form action="home.html" className="mt-16">
+            <form className="mt-16">
                 <fieldset className="mt-16">
                     <label className="label-ip">
                         <p className="mb-8 text-small">Phone</p>
 
-                        < PhoneInput country={"us"} type="text" placeholder="Enter Your Mobile Number" name="phone" value={phone} enableSearch={true} onChange={(e)=>setPhone()} 
+                        < PhoneInput  international type="text" placeholder="Enter Your Mobile Number" name="phone" value={phone} enableSearch={true}  onChange={(value) => setPhone(value)}  
                         inputStyle={{ padding: "10px",paddingLeft:"50px", fontSize: "14px" ,color:"white", backgroundColor:"#11150f"}} containerStyle={{backgroundColor:"#000"}} dropdownStyle={{backgroundColor:"#000"}}
                         style={{
     fontFamily: "'Poppins', sans-serif",
@@ -136,7 +140,7 @@ const responseGoogle =async (authResult)=>{
                     </label>
                 </fieldset>
                 <a href="" className="text-secondary">Forgot Password?</a>
-                <button className="mt-20" type="submit" onSubmit={handleSubmit}>Login</button>
+                <button className="mt-20" type="submit" onClick={handleSubmit}>Login</button>
                 <p className="mt-20 text-center text-small">Already have a Account? &ensp;<Link to="/register">Sign up</Link></p>
             </form>
         </div>
