@@ -36,3 +36,75 @@
     transform: rotate(360deg);
   }
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+.header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.header .exchange {
+  font-size: 16px;
+  color: #888;
+}
+
+.exchange-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.exchange-item img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.exchange-item .details {
+  flex-grow: 1;
+}
+
+.exchange-item .details h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.exchange-item .details p {
+  font-size: 14px;
+  color: #888;
+  margin: 5px 0 0;
+}
+
+.exchange-item .usdt {
+  background-color: #25c866;
+  color: #1e1e1e;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.exchange-item .import {
+  color: #25c866;
+  font-size: 14px;
+}
