@@ -8,6 +8,8 @@ import Wallet from './pages/wallet/wallet';
 import Cryptocurrency from './pages/wallet/Cryptocurrency';
 import Choosepayment from './pages/wallet/Choosepayment';
 import Buyquantity from './pages/wallet/Buyquantity';
+import Withdraw from './pages/wallet/Withdraw';
+
 import Qrcode from './pages/wallet/Qrcode';
 import Apibind from './pages/wallet/ApiBind';
 import Withdraw from './pages/wallet/Withdraw';
@@ -48,24 +50,22 @@ function App() {
   
   return (   
     <Router>
-         <Routes>
-          {/* home */}
-
-           <Route path="/" element={<Dashboard/>}/>
-           <Route path="/exchange" element={<Exchange/>}></Route>
-           <Route path="/earn" element={<Earn/>}></Route>
-           {/* wallet */}
-
-           <Route path="/wallet" element={<Wallet/>}></Route>
-           <Route path="/Recharge" element={<Recharge/>}></Route>
-
-           <Route path="/Userinfo" element={<Userinfo/>}></Route>
+         
            
+    <Routes>
+      {/* Home Routes */}
+      <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+      <Route path="/exchange" element={<ProtectedRoute><Exchange /></ProtectedRoute>} />
+      <Route path="/earn" element={<ProtectedRoute><Earn /></ProtectedRoute>} />
 
-           <Route path="/Choosepayment" element={<Choosepayment/>}></Route>
-           <Route path="/Buyquantity" element={<Buyquantity/>}></Route>
-           <Route path="/Qrcode" element={<Qrcode/>}></Route>
-           <Route path="/Successfullypass" element={<Successfullypass/>}></Route>
+      {/* Wallet Routes */}
+      <Route path="/wallet" element={<ProtectedRoute><Wallet /></ProtectedRoute>} />
+      <Route path="/Withdraw" element={<ProtectedRoute><Withdraw/></ProtectedRoute>} />
+
+      <Route path="/Choosepayment" element={<ProtectedRoute><Choosepayment /></ProtectedRoute>} />
+      <Route path="/Buyquantity" element={<ProtectedRoute><Buyquantity /></ProtectedRoute>} />
+      <Route path="/Qrcode" element={<ProtectedRoute><Qrcode /></ProtectedRoute>} />
+      <Route path="/Cryptocurrency" element={<ProtectedRoute><Cryptocurrency /></ProtectedRoute>} />
 
            <Route path="/Cryptocurrency" element={<Cryptocurrency/>}></Route>
 
