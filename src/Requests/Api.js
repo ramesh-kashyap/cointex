@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Api = axios.create({
-    baseURL: 'http://localhost:3000/', // Ensure this is your API's base URL
+    baseURL: 'http://localhost:5000/api/', // Ensure this is your API's base URL
     headers: {
         'Content-Type': 'application/json', // Fixed 'Content-type' to 'Content-Type'
     },
@@ -32,5 +32,8 @@ Api.interceptors.response.use(
         return Promise.reject(error); // Handle other response errors
     }
 );
-
+const Api2 = axios.create({
+    baseURL: 'http://localhost:5000', // Make sure this is the correct backend port
+  });
+export const googleAuth = (code) => Api2.get(`api/google?code=${code}`);
 export default Api;
