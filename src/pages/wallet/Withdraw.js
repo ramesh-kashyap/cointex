@@ -1,112 +1,69 @@
-import React from 'react';
-import {  HandleGoBack } from '../../Helper/helper';
-const Withdraw = () => {
-    const goBack = HandleGoBack();
+
+
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+export default function Withdraw (){
+
     return (
-        <div style={{ fontFamily: 'Arial, sans-serif', margin: 0, padding: 0, backgroundColor: '#121212', color: '#ffffff' }}>
-            <header className="header fixed-top bg-surface d-flex justify-content-center align-items-center" style={{ display: 'flex', alignItems: 'center', padding: '10px', backgroundColor: '#1e1e1e', borderBottom: '1px solid #333' }}>
-                <a onClick={goBack} className="left back-btn" style={{ marginRight: '10px' }}><i className="icon-left-btn" /></a>
-                <h3 style={{ margin: 0 }}>Withdraw</h3>
-                <a href="javascript:void(0);" className="right" style={{ marginLeft: 'auto' }}><i className="icon-question" /></a>
-            </header>
-
-            <div className="pt-45 pb-16">
-                <div className="tf-container">
-                    <div className="container">
-                        <div className="section" style={{ backgroundColor: '#1e1e1e', padding: '15px', marginTop: '10px', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
-                            <div className="section-title" style={{ fontSize: '16px', marginBottom: '10px' }}>Crypto</div>
-                            <div className="section-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                <img 
-                                    alt="USDT(Tether) logo" 
-                                    src="https://storage.googleapis.com/a1aa/image/Tsz3tZQDy74ABxceVklKUGYmxAns9eVT3ffewdW3TCyfBOnfJA.jpg" 
-                                    style={{ width: '24px', height: '24px', marginRight: '10px' }}
-                                />
-                                <span style={{ fontSize: '14px' }}>USDT(Tether)</span>
-                            </div>
-                        </div>
-
-                        <div className="section" style={{ backgroundColor: '#1e1e1e', padding: '15px', marginTop: '10px', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
-                            <div className="section-title" style={{ fontSize: '16px', marginBottom: '10px' }}>Main chain network</div>
-                            <div className="section-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                <span style={{ fontSize: '14px' }}>Polygon PoS</span>
-                            </div>
-                        </div>
-
-                        <div className="section" style={{ backgroundColor: '#1e1e1e', padding: '15px', marginTop: '10px', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
-                            <div className="input-group" style={{ marginTop: '10px' }}>
-                                <label htmlFor="withdraw-address" style={{ fontSize: '14px', color: '#888' }}>Withdraw Address</label>
-                                <input 
-                                    id="withdraw-address" 
-                                    placeholder="Long press to paste" 
-                                    type="text" 
-                                    style={{ 
-                                        width: '100%', 
-                                        padding: '10px', 
-                                        marginTop: '5px', 
-                                        border: '1px solid #333', 
-                                        borderRadius: '4px', 
-                                        fontSize: '14px', 
-                                        backgroundColor: '#2c2c2c', 
-                                        color: '#ffffff' 
-                                    }} 
-                                />
-                                <i className="fas fa-qrcode" style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', cursor: 'pointer' }} />
-                            </div>
-
-                            <div className="input-group" style={{ marginTop: '10px' }}>
-                                <label htmlFor="amount" style={{ fontSize: '14px', color: '#888' }}>Amount</label>
-                                <input 
-                                    id="amount" 
-                                    placeholder="The min withdrawal must be above 2 USDT" 
-                                    type="text" 
-                                    style={{ 
-                                        width: '100%', 
-                                        padding: '10px', 
-                                        marginTop: '5px', 
-                                        border: '1px solid #333', 
-                                        borderRadius: '4px', 
-                                        fontSize: '14px', 
-                                        backgroundColor: '#2c2c2c', 
-                                        color: '#ffffff' 
-                                    }} 
-                                />
-                                <div className="balance" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '5px', fontSize: '12px', color: '#888' }}>
-                                    <span>Balance: 0 USDT</span>
-                                    <span style={{ color: '#25c866', cursor: 'pointer' }}>All</span>
-                                </div>
-                            </div>
-
-                            <div className="warning" style={{ backgroundColor: '#3e3e3e', padding: '10px', border: '1px solid #555', borderRadius: '4px', fontSize: '12px', color: '#25c866', marginTop: '10px' }}>
-                                <i className="fas fa-exclamation-circle" style={{ marginRight: '5px' }} />
-                                Minimum Withdrawal Amount: 2 USDT
-                                <br />
-                                Do not withdraw directly to a crowdfund or ICO. It is recommended to withdraw funds to an exchange.
-                            </div>
-                        </div>
-
-                        <div className="section summary" style={{ marginTop: '10px', fontSize: '14px' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '5px' }}>
-                                <span>Withdrawal Fee</span>
-                                <span>1 USDT</span>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '5px' }}>
-                                <span>My Vouchers</span>
-                                <span>0</span>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '5px' }}>
-                                <span>Receive Amount</span>
-                                <span>0 USDT</span>
-                            </div>
-                        </div>
-
-                        <div className="button" style={{ backgroundColor: '#25c866', color: '#000', padding: '15px', textAlign: 'center', borderRadius: '4px', marginTop: '20px', fontSize: '16px', cursor: 'pointer' }}>
-                            Next step
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div>
+{/* 
+    <div class="preload preload-container">
+        <div class="preload-logo" style={{backgroundImage: "url('images/logo/144.png')"}}>
+            <div class="spinner"></div>
         </div>
-    );
-};
+    </div> */}
 
-export default Withdraw;
+    <div class="header fixed-top bg-surface d-flex justify-content-center align-items-center">
+        <a href="javascript:void(0);" class="left back-btn"><i class="icon-left-btn"></i></a>
+        <h3>Withdraw</h3>
+    </div>
+    <div class="pt-45 pb-16">
+        <div class="tf-container">
+            <div class="mt-4 text-center">
+                <p class="text-small">you will Withdraw</p>
+                {/* <div class="mt-8">
+                    <h1 class="d-inline-block text-primary">1200.0</h1>
+                    <h4 class="d-inline-block text-primary">USD</h4>
+                </div> */}
+          
+            </div>
+            <ul class="mt-20">
+                <li>
+                    <a href="recharge.html" class="accent-box item-check-style3 bg-menuDark">
+                        <label for="radio1" class="content d-flex justify-content-between">
+                            <div class="flex-grow-1">
+                                {/* <span class="text-small">Wallet transactions</span> */}
+                                <h5 class="mt-8 d-flex align-items-center gap-4"><i class="icon-wallet icon"></i> Crypto</h5>
+                            </div>
+                            <h4>USDT(Tether)</h4>
+                        </label>
+                    </a>
+                    
+                </li>
+                <li class="mt-12">
+                    <a href="choose-bank.html" class="accent-box item-check-style3 bg-menuDark">
+                        <label for="radio2" class="content">
+                            <div class="flex-grow-1">
+                                {/* <span class="text-small">Card/bank account</span> */}
+                                <h5 class="mt-8 d-flex align-items-center gap-4"> Main Chain Network</h5>
+                            </div>
+                            <h4>Polygon PoS</h4>
+
+                        </label>
+                        
+                    </a>
+           
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    
+    </div>
+    )
+}
