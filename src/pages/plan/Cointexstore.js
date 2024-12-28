@@ -1,11 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import {  HandleGoBack } from '../../Helper/helper';
 const Cointexstore = () => {
-    const navigate = useNavigate();
+    
 
-    const handleGoBack = () => {
-        navigate(-1); // This takes the user back to the previous page
-    };
+  const goBack = HandleGoBack();
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', margin: 0, padding: 0, backgroundColor: '#121212', color: '#ffffff' }}>
 
@@ -14,7 +12,7 @@ const Cointexstore = () => {
        className="header fixed-top bg-surface d-flex justify-content-center align-items-center"
        style={{ display: 'flex', alignItems: 'center', padding: '10px 0', borderBottom: '1px solid #333333' }}
       >
-        <a style={{ color: "#ffffff", fontSize: "18px" }} onClick={handleGoBack}>
+        <a style={{ color: "#ffffff", fontSize: "18px" }} onClick={goBack}>
           <i className="icon-left-btn"></i>
         </a>
         <h3 style={{ color: "#ffffff", fontSize: "18px", margin: 0 }}>Cointex Store</h3>

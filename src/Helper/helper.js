@@ -1,6 +1,6 @@
 import { jwtDecode } from 'jwt-decode';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import { BrowserRouter  as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import Login from '../pages/auth/login';
 import Dashboard from '../pages/auth/login';
 import Register from '../pages/auth/register';
@@ -18,7 +18,13 @@ import Register from '../pages/auth/register';
         </GoogleOAuthProvider>
     );
 };
+export const HandleGoBack = () => {
+    const navigate = useNavigate();
 
+    return () => {
+        navigate(-1); // This takes the user back to the previous page
+    };
+};
  export const isAuthenticated = () => {
     const token = localStorage.getItem('authToken');
     if (!token) return false;
