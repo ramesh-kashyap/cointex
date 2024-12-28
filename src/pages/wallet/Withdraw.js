@@ -1,10 +1,11 @@
 import React from 'react';
-
+import {  HandleGoBack } from '../../Helper/helper';
 const Withdraw = () => {
+    const goBack = HandleGoBack();
     return (
         <div style={{ fontFamily: 'Arial, sans-serif', margin: 0, padding: 0, backgroundColor: '#121212', color: '#ffffff' }}>
             <header className="header fixed-top bg-surface d-flex justify-content-center align-items-center" style={{ display: 'flex', alignItems: 'center', padding: '10px', backgroundColor: '#1e1e1e', borderBottom: '1px solid #333' }}>
-                <a href="javascript:void(0);" className="left back-btn" style={{ marginRight: '10px' }}><i className="icon-left-btn" /></a>
+                <a onClick={goBack} className="left back-btn" style={{ marginRight: '10px' }}><i className="icon-left-btn" /></a>
                 <h3 style={{ margin: 0 }}>Withdraw</h3>
                 <a href="javascript:void(0);" className="right" style={{ marginLeft: 'auto' }}><i className="icon-question" /></a>
             </header>
