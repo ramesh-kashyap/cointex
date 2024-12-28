@@ -139,7 +139,9 @@ const responseGoogle = async (authResult)=>{
                         </div>
                     </label>
                 </fieldset>
+                <Link to="/forgot">
                 <a href="" className="text-secondary">Forgot Password?</a>
+                </Link>
                 <button className="mt-20" type="submit" onClick={handleSubmit}>Login</button>
                 <p className="mt-20 text-center text-small">Already have a Account? &ensp;<Link to="/register">Sign up</Link></p>
             </form>
