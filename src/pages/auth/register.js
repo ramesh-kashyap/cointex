@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Api2, { googleAuth } from '../../Requests/Api';
 
 import PhoneInput from "react-phone-input-2";
-// import "react-phone-input-2/lib/newcss.css";
+import "react-phone-input-2/lib/newcss.css";
  
 export default function Register(){
     const navigate = useNavigate();
