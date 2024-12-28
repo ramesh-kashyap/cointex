@@ -13,10 +13,11 @@ const submitForm = async (e) =>{
       const response = await Api.post('/forget',{
         phone:phone,
       });
-      // console.log(response);
+      console.log(response);
       if(response.data){
-        localStorage.setItem('phone', phone);
-        navigate('/reset');        
+        sessionStorage.setItem('phone', phone);
+        localStorage.setItem('message', 'forgot OTP');
+        navigate('/Otp');        
       }
       else{
         console.error(response.data.message);
