@@ -17,15 +17,17 @@ export default function Newpass() {
 
         try{            
               // Retrieve the phone number from localStorage
-            const phone = localStorage.getItem('phone');
+            const phone = sessionStorage.getItem('phone');
              const response = await Api.post('/reset',{
                 phone,
                 password:password,
              });       
              
-             if(response.data){
-                localStorage.removeItem('phone');
-                navigate('/sendotp');
+             if(response.data){                
+                 localStorage.setItem('authToken', response.data.token); 
+                 sessionStorage.removeItem('phone');            
+                navigate('/');
+                
              }
         }
         catch{

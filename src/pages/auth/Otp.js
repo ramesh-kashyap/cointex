@@ -68,27 +68,12 @@ const OTPForm = () => {
         <div>
             <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
                 <h3>OTP Verification</h3>
-                <h3>OTP Verification</h3>
             </div>
 
             <div className="pt-45 pb-20">
                 <div className="tf-container">
                     <form className="mt-32" onSubmit={handleSubmit}>
-                    <form className="mt-32" onSubmit={handleSubmit}>
                         <div className="digit-group mt-12">
-                            {otp.map((digit, index) => (
-                                <input
-                                    key={index}
-                                    id={`digit-${index + 1}`}
-                                    type="text"
-                                    maxLength="1"
-                                    value={digit}
-                                    onChange={(e) => handleChange(e, index)}
-                                    onKeyDown={(e) => handleKeyDown(e, index)}
-                                    required
-                                    autoFocus={index === 0}
-                                />
-                            ))}
                             {otp.map((digit, index) => (
                                 <input
                                     key={index}
@@ -108,17 +93,9 @@ const OTPForm = () => {
 
                         <button
                             type="submit"
-
-                        {message && <p className="text-center mt-4">{message}</p>}
-
-                        <button
-                            type="submit"
                             className="mt-40 tf-btn lg primary"
                             disabled={loading}
-                            disabled={loading}
                         >
-                            {loading ? "Verifying..." : "Confirm"}
-                        </button>
                             {loading ? "Verifying..." : "Confirm"}
                         </button>
                     </form>
@@ -126,9 +103,6 @@ const OTPForm = () => {
             </div>
         </div>
     );
-};
-
-export default OTPForm;
 };
 
 export default OTPForm;

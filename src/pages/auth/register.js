@@ -6,6 +6,8 @@ import Api2, { googleAuth } from '../../Requests/Api';
 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/newcss.css";
+
+import CustomPopup from '../auth/Successfullypass';
  
 export default function Register(){
     const navigate = useNavigate();
@@ -19,6 +21,13 @@ export default function Register(){
     const[refferal, setRefferal] = useState('');
     const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({});
+
+    const [isPopupOpen, setIsPopupOpen] = useState(false); // State to toggle popup
+    const [popupMessage, setPopupMessage] = useState('');
+    const closePopup = () => {
+        setIsPopupOpen(false);
+      };
+
     const [passwordType, setPasswordType] = useState("password");
     const [passwordType2, setPasswordType2] = useState("password");
     const togglePasswordView = () => {
@@ -50,8 +59,14 @@ export default function Register(){
             // Save token or handle successful registration
             localStorage.setItem('isRegistered', 'true');
             sessionStorage.setItem('phone', phone);
+            setPopupMessage(response.data.message); // Set the message from the response
+            setIsPopupOpen(true);        
+            
+           localStorage.setItem('message', 'User registered successfully. Please verify your OTP.');
             navigate('/Otp');
-        } catch (error) {
+        } catch (error) {          
+            setPopupMessage('An error occurred. Please try again.');
+            setIsPopupOpen(true);
             console.error('Registration failed:', error.response?.data);
             setErrors(error.response?.data?.errors || { general: 'An error occurred' });
         } finally {
@@ -102,6 +117,7 @@ const responseGoogle =async (authResult)=>{
     </div>
     <div class="pt-45">
         <div class="tf-container">
+        {isPopupOpen && <CustomPopup message={popupMessage} onClose={closePopup}/>}
 
             <form onSubmit={formSubmit} class="mt-32 mb-16">
                 <h2 class="text-center">Register Cointex</h2>
