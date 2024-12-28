@@ -1,11 +1,12 @@
 import React from 'react';
-
+import {  HandleGoBack } from '../../Helper/helper';
 
 const Deposit = () => {
+    const goBack = HandleGoBack();
     return (
         <div style={{ fontFamily: 'Arial, sans-serif', margin: 0, padding: 0, backgroundColor: '#121212', color: '#ffffff' }}>
             <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center" style={{ display: 'flex', alignItems: 'center', padding: '10px 0', backgroundColor: '#1e1e1e', borderBottom: '1px solid #333' }}>
-                <a href="javascript:void(0);" className="left back-btn" style={{ color: '#ffffff', marginRight: '10px' }}>
+                <a onClick={goBack}className="left back-btn" style={{ color: '#ffffff', marginRight: '10px' }}>
                     <i className="icon-left-btn"></i>
                 </a>
                 <h3 style={{ fontSize: '18px', margin: 0 }}>Deposit</h3>
