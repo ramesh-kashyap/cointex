@@ -8,6 +8,8 @@ import Wallet from './pages/wallet/wallet';
 import Cryptocurrency from './pages/wallet/Cryptocurrency';
 import Choosepayment from './pages/wallet/Choosepayment';
 import Buyquantity from './pages/wallet/Buyquantity';
+// import Withdraw from './pages/wallet/Withdraw';
+
 import Qrcode from './pages/wallet/Qrcode';
 import Apibind from './pages/wallet/ApiBind';
 import Withdraw from './pages/wallet/Withdraw';
@@ -53,6 +55,8 @@ function App() {
 
       {/* Wallet Routes */}
       <Route path="/wallet" element={<ProtectedRoute><Wallet /></ProtectedRoute>} />
+      {/* <Route path="/Withdraw" element={<ProtectedRoute><Withdraw/></ProtectedRoute>} /> */}
+
       <Route path="/Choosepayment" element={<ProtectedRoute><Choosepayment /></ProtectedRoute>} />
       <Route path="/Buyquantity" element={<ProtectedRoute><Buyquantity /></ProtectedRoute>} />
       <Route path="/Qrcode" element={<ProtectedRoute><Qrcode /></ProtectedRoute>} />
