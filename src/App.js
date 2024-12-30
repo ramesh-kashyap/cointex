@@ -40,6 +40,7 @@ import Forgot from './pages/auth/forgot';
 import Newpass from './pages/auth/newpass';
 import Otp from './pages/auth/Otp';
 
+
 function App() {
 
   
@@ -77,8 +78,8 @@ function App() {
       <Route path="/login" element={<PublicRoute><GoogleAuthWrapper /></PublicRoute>} />
       <Route path="/register" element={<PublicRoute><GoogleAuthWrapperRegister /></PublicRoute>} />
       <Route path="/forgot" element={<PublicRoute><Forgot /></PublicRoute>} />
-      <Route path="/Newpass" element={<PublicRoute><Newpass/></PublicRoute>}/>
-      <Route path="/Otp" element={<ProtecRegRoute><Otp/></ProtecRegRoute>}/>
+      <Route path="/newpass" element={<PublicRoute><Newpass/></PublicRoute>}/>
+      <Route path="/Otp" element={<Otp/>}/>
     </Routes>
   </Router>
   );
