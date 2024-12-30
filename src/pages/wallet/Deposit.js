@@ -1,12 +1,30 @@
-import React from 'react';
-import {  HandleGoBack } from '../../Helper/helper';
+import React, { useState } from 'react';
 
 function Deposit() {
+  // State to track the selected wallet address
+  const [selectedAddress, setSelectedAddress] = useState("456789h8765456789765467");
+
+  // Demo wallet addresses
+  const walletAddresses = {
+    polygon: "123456abcdef789polygon",
+    ethereum: "987654zyxwvu321ethereum",
+    binance: "654321lmnop098binance",
+    solana: "789123ghijk567solana",
+  };
+
+  // Handle copying to clipboard
+  const handleCopy = () => {
+    navigator.clipboard.writeText(selectedAddress)
+      .then(() => {
+        alert("Wallet address copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Error copying text: ", err);
+      });
+  };
+
   return (
     <>
-      {/* Preload */}
-     
-
       {/* Header */}
       <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
         <a href="javascript:void(0);" className="left back-btn">
@@ -39,17 +57,24 @@ function Deposit() {
             <br />
             <p>Main Chain Network</p>
             <br />
-            <input
-              type="text"
-              value=""
-              placeholder="Polygon"
+
+            {/* Wallet Selection */}
+            <select
               style={{
+                width: '100%',
+                maxWidth: '100%',
+                padding: '8px',
+                backgroundColor: 'transparent',
                 border: '2px solid #7e8088',
                 color: 'white',
-                padding: '5px',
-                backgroundColor: 'transparent',
               }}
-            />
+              onChange={(e) => setSelectedAddress(walletAddresses[e.target.value])}
+            >
+              <option value="polygon" style={{ color: 'black' }}>Polygon</option>
+              <option value="ethereum" style={{ color: 'black' }}>Ethereum</option>
+              <option value="binance" style={{ color: 'black' }}>Binance Smart Chain</option>
+              <option value="solana" style={{ color: 'black' }}>Solana</option>
+            </select>
             <br />
             <br />
             <center>
@@ -66,19 +91,20 @@ function Deposit() {
           </ul>
 
           <li>
-            <a href="recharge.html" className="accent-box item-check-style3 bg-menuDark">
+            <div className="accent-box item-check-style3 bg-menuDark">
               <label htmlFor="radio1" className="content d-flex justify-content-between">
                 <div className="flex-grow-1">
                   <span className="text-small">Deposit Address</span>
                   <h5 className="mt-8 d-flex align-items-center gap-4">
-                    456789h8765456789765467
+                    {selectedAddress}
                   </h5>
                 </div>
                 <h4>
-                  <i className="icon-copy icon"></i>
+                  {/* Copy Button */}
+                  <i className="icon-copy icon" onClick={handleCopy}></i>
                 </h4>
               </label>
-            </a>
+            </div>
           </li>
 
           <ul className="mt-12 accent-box-v4 bg-menuDark">
@@ -140,25 +166,10 @@ function Deposit() {
         <div className="modal fade modalCenter" id="success">
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content success_box">
-              <div className="icon-1 ani3">
-                <span className="circle-box lg bg-circle check-icon bg-primary"></span>
-              </div>
-              <div className="icon-2 ani5">
-                <span className="circle-box md bg-primary"></span>
-              </div>
-              <div className="icon-3 ani8">
-                <span className="circle-box md bg-primary"></span>
-              </div>
-              <div className="icon-4 ani2">
-                <span className="circle-box sm bg-primary"></span>
-              </div>
               <div className="text-center">
                 <h2 className="text-surface">Successful!</h2>
                 <p className="text-small mt-8">Your transfer has been done!</p>
-                <h5 className="mt-16 text-surface">Transfer amount</h5>
                 <h1 className="mt-8 text-primary">$ 1200.0</h1>
-                <p className="mt-16 text-surface text-button">Notification</p>
-                <p className="text-small mt-4">BTC payment</p>
               </div>
               <a href="home.html" className="tf-btn lg primary mt-40">
                 Done
