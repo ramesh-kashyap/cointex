@@ -1,5 +1,4 @@
-import React from 'react';
-import {  HandleGoBack } from '../../Helper/helper';
+import React, { useState } from 'react';
 
 const Deposit = () => {
     const goBack = HandleGoBack();
@@ -18,19 +17,20 @@ const Deposit = () => {
           </ul>
 
           <li>
-            <a href="recharge.html" className="accent-box item-check-style3 bg-menuDark">
+            <div className="accent-box item-check-style3 bg-menuDark">
               <label htmlFor="radio1" className="content d-flex justify-content-between">
                 <div className="flex-grow-1">
                   <span className="text-small">Deposit Address</span>
                   <h5 className="mt-8 d-flex align-items-center gap-4">
-                    456789h8765456789765467
+                    {selectedAddress}
                   </h5>
                 </div>
                 <h4>
-                  <i className="icon-copy icon"></i>
+                  {/* Copy Button */}
+                  <i className="icon-copy icon" onClick={handleCopy}></i>
                 </h4>
               </label>
-            </a>
+            </div>
           </li>
 
           <ul className="mt-12 accent-box-v4 bg-menuDark">
@@ -92,25 +92,10 @@ const Deposit = () => {
         <div className="modal fade modalCenter" id="success">
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content success_box">
-              <div className="icon-1 ani3">
-                <span className="circle-box lg bg-circle check-icon bg-primary"></span>
-              </div>
-              <div className="icon-2 ani5">
-                <span className="circle-box md bg-primary"></span>
-              </div>
-              <div className="icon-3 ani8">
-                <span className="circle-box md bg-primary"></span>
-              </div>
-              <div className="icon-4 ani2">
-                <span className="circle-box sm bg-primary"></span>
-              </div>
               <div className="text-center">
                 <h2 className="text-surface">Successful!</h2>
                 <p className="text-small mt-8">Your transfer has been done!</p>
-                <h5 className="mt-16 text-surface">Transfer amount</h5>
                 <h1 className="mt-8 text-primary">$ 1200.0</h1>
-                <p className="mt-16 text-surface text-button">Notification</p>
-                <p className="text-small mt-4">BTC payment</p>
               </div>
               <a href="home.html" className="tf-btn lg primary mt-40">
                 Done
