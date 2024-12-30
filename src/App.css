@@ -108,3 +108,18 @@ body {
   color: #25c866;
   font-size: 14px;
 }
+.responsive-select {
+  width: 100%;
+  max-width: 100%; /* Ensures it stretches to the max width */
+  color: black;  /* Text color black */
+  padding: 8px;
+  background-color: transparent;
+  border: 2px solid #7e8088;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .responsive-select {
+    padding: 12px; /* Adjust padding for smaller screens */
+  }
+}
