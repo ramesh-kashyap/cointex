@@ -13,7 +13,7 @@ return (
         </div>
       </div> */}
       
-      <CustomPopup/>
+      {/* <CustomPopup/> */}
       <div className="header-style2 fixed-top bg-menuDark">
   <div className="d-flex justify-content-between align-items-center gap-14">
     <div className="box-account style-2">
@@ -67,7 +67,7 @@ return (
       <li>
 
     
-        <Link to="/Buyquantity" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+        <Link to="/Bind-List" className="tf-list-item d-flex flex-column gap-8 align-items-center">
           <span className="box-round bg-surface d-flex justify-content-center align-items-center">
             <i className="icon icon-wallet"></i>
           </span>

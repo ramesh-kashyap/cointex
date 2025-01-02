@@ -59,7 +59,7 @@ function App() {
       <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       <Route path="/exchange" element={<ProtectedRoute><Exchange /></ProtectedRoute>} />
       <Route path="/earn" element={<ProtectedRoute><Earn /></ProtectedRoute>} />
-      <Route path="/Binance" element={<ProtectedRoute><Binance/></ProtectedRoute>}/>
+     
 
 
       {/* Wallet Routes */}
