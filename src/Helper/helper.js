@@ -45,15 +45,15 @@ export const ProtectedRoute = ({ children }) => {
 
 export const ProtecRegRoute = ({ children }) => {
     // Check if the user has completed registration (via localStorage or sessionStorage)
-    const isRegistered = localStorage.getItem('isRegistered');  // Flag indicating if user is registered
+    const isRegistered = localStorage.getItem('isRegistered');
+    const currentPath = window.location.pathname;
+    const allowedPaths = ['/forgot', '/register'];
+    const isOnAllowedPath = allowedPaths.includes(currentPath);
   
-    if (!isRegistered) {
-      // If not registered, redirect to the /register page
+    // Redirect to /register if user is not registered and not on allowed paths
+    if (!isRegistered && !isOnAllowedPath) {
       return <Navigate to="/register" replace />;
     }
-  
-    // If the user is registered, allow access to the children (protected routes)
-    return children;
   };
 // Public Route Component
 export const PublicRoute = ({ children }) => {
