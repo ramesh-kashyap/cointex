@@ -26,7 +26,7 @@ export default function Newpass() {
              if(response.data){                
                  localStorage.setItem('authToken', response.data.token); 
                  sessionStorage.removeItem('phone');            
-                navigate('/');
+                 navigate('/', { state: { message: response?.data.message } });
                 
              }
         }
