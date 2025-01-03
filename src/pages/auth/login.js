@@ -7,6 +7,7 @@ import { BrowserRouter as Route, Router,Routes, Link } from 'react-router-dom';
 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/newcss.css";
+import CustomPopup from '../auth/Successfullypass';
 
 export default function Login(){
     const navigate = useNavigate();
@@ -15,6 +16,11 @@ export default function Login(){
     const [password, setPassword] = useState('');
     const [passwordType, setPasswordType] = useState("password");
     const [isActive, setIsActive] = useState(false);
+    const [isPopupOpen, setIsPopupOpen] = useState(false); // State to toggle popup
+    const [popupMessage, setPopupMessage] = useState('');
+    const closePopup = () => {
+        setIsPopupOpen(false);
+      };
 
     const togglePasswordView = () => {
         if (passwordType === "password") {
@@ -26,8 +32,6 @@ export default function Login(){
         }
     };
 
-
-
     const handleSubmit = async (e) => {
         e.preventDefault('Phone :', phone);
         console.log('error accur');
@@ -38,16 +42,22 @@ export default function Login(){
         });
 
         if(response.data.status){
+            setPopupMessage(response.data.status); // Set the message from the response
+            setIsPopupOpen(true); 
             console.log('error accur:',response.data.status);
         }
         else{
-            console.error(response.data.message);
+            console.log('thism responsw',response?.data.message );
+            setPopupMessage(response?.data.message); // Set the message from the response
+            setIsPopupOpen(true); 
             localStorage.setItem('authToken', response.data.token);
-            navigate('/');
+            navigate('/', { state: { message: response?.data.message } });
         }
     }
     catch(error){
         console.error('Error during login:', error.response || error.message || error);
+        setPopupMessage(error.response?.data); // Set the message from the response
+        setIsPopupOpen(true); 
         alert('An error occurred during the API request');
     }
 
@@ -99,6 +109,7 @@ const responseGoogle = async (authResult)=>{
     </div>
     <div className="pt-45 pb-20">
         <div className="tf-container">
+        {isPopupOpen && <CustomPopup message={popupMessage} onClose={closePopup}/>}
             <div className="mt-32">
                 <h2 className="text-center">Login Cointex</h2>
                 <ul className="mt-40 socials-login">
