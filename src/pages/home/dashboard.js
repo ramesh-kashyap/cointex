@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import CustomPopup from '../auth/Successfullypass';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-export default function dashboard(){
+export default function Dashboard() {
+    const [isPopupVisible, setPopupVisible] = useState(true); // Popup initially visible
+
+    const closePopup = () => {
+        setPopupVisible(false); // Hide and disable the popup
+    };
 
 
 return (
@@ -13,7 +18,7 @@ return (
         </div>
       </div> */}
       
-      <CustomPopup/>
+       {isPopupVisible && <CustomPopup onClose={closePopup} />}
       <div className="header-style2 fixed-top bg-menuDark">
   <div className="d-flex justify-content-between align-items-center gap-14">
     <div className="box-account style-2">

@@ -64,16 +64,17 @@ export default function Register(){
             
            localStorage.setItem('message', 'User registered successfully. Please verify your OTP.');
             navigate('/Otp');
-        } catch (error) {          
-            setPopupMessage('An error occurred. Please try again.');
+        } catch (error) { 
             setIsPopupOpen(true);
             console.error('Registration failed:', error.response?.data);
+            setPopupMessage('Failed',error.response?.data);    
+        //    alert( error.response?.data?.message);
             setErrors(error.response?.data?.errors || { general: 'An error occurred' });
         } finally {
             setLoading(false);
         }
         if (password !== cpassword) {
-            alert('Passwords do not match!');
+            // alert('Passwords do not match!');
             return;
         }
     }
@@ -95,7 +96,7 @@ const responseGoogle =async (authResult)=>{
             localStorage.setItem('authToken', result.data.token);
 
             // Redirect to dashboard
-            navigate('/');
+            navigate('/', { state: { message: result?.data.message } });
        
         }else {
             // If there's no authorization code, handle the error
@@ -112,12 +113,13 @@ const responseGoogle =async (authResult)=>{
       });
     return(
         <div>
+            
+        {isPopupOpen && <CustomPopup message={popupMessage} onClose={closePopup}/>}
     <div class="header fixed-top bg-surface">
         <a href="#" class="left back-btn"><i class="icon-left-btn"></i></a>
     </div>
     <div class="pt-45">
         <div class="tf-container">
-        {isPopupOpen && <CustomPopup message={popupMessage} onClose={closePopup}/>}
 
             <form onSubmit={formSubmit} class="mt-32 mb-16">
                 <h2 class="text-center">Register Cointex</h2>

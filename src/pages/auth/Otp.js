@@ -57,7 +57,7 @@ const OTPForm = () => {
             const message = localStorage.getItem('message');
             if(message==='User registered successfully. Please verify your OTP.'){
                 localStorage.removeItem('isRegistered'); 
-                localStorage.removeItem('User registered successfully. Please verify your OTP.');
+                localStorage.removeItem('message', 'User registered successfully. Please verify your OTP.');
                 sessionStorage.removeItem('phone');
                 localStorage.setItem('authToken', response.data.token);
                 navigate('/');}
