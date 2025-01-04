@@ -25,7 +25,7 @@ import Userinfo from './pages/profile/Userinfo';
 import Recharge from './pages/wallet/Recharge';
 
 import Blogdetails from './pages/profile/blogdetails';
-
+import ChangePass from './pages/profile/changePass';
 
 
 // home
@@ -71,8 +71,8 @@ function App() {
       <Route path="/Deposit" element={<ProtectedRoute><Deposit /></ProtectedRoute>} />
       <Route path="/Withdraw" element={<ProtectedRoute><Withdraw /></ProtectedRoute>} />
       <Route path="/Bind-List" element={<ProtectedRoute><Bindlist /></ProtectedRoute>} />
-
-      <Route path="/Cointex-Store" element={<ProtectedRoute><Cointexstore /></ProtectedRoute>} />
+      <Route path="/change-password" element={<ProtectedRoute><ChangePass/></ProtectedRoute>}/>
+      <Route path="/Cointex-Store" element={<ProtectedRoute><Cointexstore /></ProtectedRoute>}/>
 
       {/* Auth Routes */}
       <Route path="/login" element={<PublicRoute><GoogleAuthWrapper /></PublicRoute>} />
