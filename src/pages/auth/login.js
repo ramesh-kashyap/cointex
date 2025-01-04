@@ -104,12 +104,12 @@ const responseGoogle = async (authResult)=>{
           <div className="spinner"></div>
         </div>
     </div> */}
+    {isPopupOpen && <CustomPopup message={popupMessage} onClose={closePopup}/>}
     <div className="header fixed-top bg-surface">
         <a href="#" className="left back-btn"><i className="icon-left-btn"></i></a>
     </div>
     <div className="pt-45 pb-20">
-        <div className="tf-container">
-        {isPopupOpen && <CustomPopup message={popupMessage} onClose={closePopup}/>}
+        <div className="tf-container">        
             <div className="mt-32">
                 <h2 className="text-center">Login Cointex</h2>
                 <ul className="mt-40 socials-login">

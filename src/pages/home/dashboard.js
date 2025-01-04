@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CustomPopup from '../auth/Successfullypass';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
 export default function Dashboard() {
-    const [isPopupVisible, setPopupVisible] = useState(true); // Popup initially visible
+    const [isPopupVisible, setPopupVisible] = useState(false);
+
+    useEffect(() => {
+        // Check if the popup should be shown
+        const isPopupShown = sessionStorage.getItem('popupShown');
+
+        if (!isPopupShown) {
+            // Show the popup if it's not shown before
+            setPopupVisible(true);
+            sessionStorage.setItem('popupShown', 'true');
+        }
+    }, []);
 
     const closePopup = () => {
         setPopupVisible(false); // Hide and disable the popup
     };
-
 
 return (
     <div>
