@@ -10,6 +10,9 @@ import "react-phone-input-2/lib/newcss.css";
 import CustomPopup from '../auth/Successfullypass';
 
 export default function Login(){
+    const goBack = () => {
+        navigate(-1); // Go back to the previous page
+    };
     const navigate = useNavigate();
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
@@ -107,7 +110,7 @@ const responseGoogle = async (authResult)=>{
     </div> */}
     {isPopupOpen && <CustomPopup message={popupMessage} onClose={closePopup}/>}
     <div className="header fixed-top bg-surface">
-        <a href="#" className="left back-btn"><i className="icon-left-btn"></i></a>
+        <a href="#" className="left back-btn"><i className="icon-left-btn" onclick={goBack}></i></a>
     </div>
     <div className="pt-45 pb-20">
         <div className="tf-container">        
