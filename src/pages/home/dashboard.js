@@ -4,9 +4,26 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Api from '../../Requests/Api';
 import { jwtDecode } from 'jwt-decode';
 export default function Dashboard(){
-  const [data, setData] = useState(null);
+    const [data, setData] = useState(null);
+
     const [accountInfo, setAccountInfo] = useState(null);
     const [error, setError] = useState(null);
+
+    const [isPopupVisible, setPopupVisible] = useState(false); // Popup initially visible
+
+    useEffect(() => {
+        // Check if the popup should be shown
+        const isPopupShown = sessionStorage.getItem('popupShown');
+        if (!isPopupShown) {
+            // Show the popup if it's not shown before
+            setPopupVisible(true);
+            sessionStorage.setItem('popupShown', 'true');
+        }
+    }, []);
+
+    const closePopup = () => {
+        setPopupVisible(false); // Hide and disable the popup
+    };
     
     useEffect(() => {
         // Fetch account info from backend

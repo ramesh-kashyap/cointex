@@ -3,7 +3,9 @@ import { jwtDecode } from 'jwt-decode';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../Requests/Api';
+import { HandleGoBack } from '../../Helper/helper.js';
 export default function ApiBind() {
+   const goBack = HandleGoBack();
   const navigate = useNavigate();
     const location = useLocation();
     const { exchangeName } = location.state || {};
@@ -74,11 +76,11 @@ useEffect(() => {
 }, []);
   return (
     <div>
-        
-          {exchangeName && (
+
+{exchangeName && (
             <>
-      <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
-        <a href="javascript:void(0);" className="left back-btn"><i className="icon-left-btn"></i></a>
+           <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
+        <a onClick={goBack} className="left back-btn"><i className="icon-left-btn"></i></a>
         <h3> {exchangeName} </h3>
       </div>
       

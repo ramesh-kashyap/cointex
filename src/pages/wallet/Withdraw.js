@@ -1,6 +1,7 @@
 import React from "react";
-
+import { HandleGoBack } from '../../Helper/helper.js';
 export default function Withdraw() {
+   const goBack = HandleGoBack();
   return (
     <div>
       {/* Preload */}
@@ -15,7 +16,7 @@ export default function Withdraw() {
 
       {/* Header */}
       <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
-        <a href="javascript:void(0);" className="left back-btn">
+        <a onClick={goBack} className="left back-btn">
           <i className="icon-left-btn"></i>
         </a>
         <h3>Withdraw</h3>
