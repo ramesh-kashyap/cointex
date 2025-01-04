@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import { useLocation } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 import Api from '../../Requests/Api';
 export default function ApiBind() {
+  const navigate = useNavigate();
     const location = useLocation();
     const { exchangeName } = location.state || {};
       // Render a fallback message if exchangeName is not available
-  
+   const [data, setData] = useState(null);
   const [apiKey, setApiKey] = useState('');
   const [secretKey, setSecretKey] = useState('');
   
@@ -42,13 +43,35 @@ export default function ApiBind() {
         const response = await Api.post('/apiBind', formData); // Make API request
             console.log('Registration successful:', response.data);
         // Handle the response as needed (e.g., show a success message)
-  
+        navigate('/');
       } catch (error) {
         console.error('Error submitting form data:', error);
       }
         
   
 }
+
+
+useEffect(() => {
+  // Fetch account info from backend
+ const token = localStorage.getItem('authToken');
+         const decoded = jwtDecode(token);
+         const userId = decoded.userId;// Extracting user_id from decoded token 
+  const fetchAccountInfo = async () => {
+      try {
+         
+        
+          const response2 = await Api.get(`/future-account-info?userId=${userId}`);
+          setData(response2.data);
+          console.log('Future Account Info:', response2.data);
+      } catch (err) {
+         
+          console.error(err);
+      }
+  };
+
+  fetchAccountInfo();
+}, []);
   return (
     <div>
         
@@ -150,9 +173,9 @@ export default function ApiBind() {
                 <div className="flex-grow-1">
                   <span className="text-small">Trust IPs Only (Recommended)</span>
                   <p className="mt-8 d-flex align-items-center gap-4">
-                    123432.123.432.5678.987.
+                  {data?.publicIP || '0'}
                     <br />
-                    345.87654.87654.98765.....
+                   
                   </p>
                 </div>
                 <p>copy</p>
