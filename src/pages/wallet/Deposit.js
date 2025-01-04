@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-
+import { HandleGoBack } from '../../Helper/helper.js';
 function Deposit() {
   // State to track the selected wallet address
+  const goBack = HandleGoBack();
   const [selectedAddress, setSelectedAddress] = useState("456789h8765456789765467");
 
   // Demo wallet addresses
@@ -27,7 +28,7 @@ function Deposit() {
     <>
       {/* Header */}
       <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
-        <a href="javascript:void(0);" className="left back-btn">
+        <a onClick={goBack} className="left back-btn">
           <i className="icon-left-btn"></i>
         </a>
         <h3>Deposit</h3>

@@ -6,11 +6,16 @@ import Api2, { googleAuth } from '../../Requests/Api';
 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
+import { HandleGoBack } from '../../Helper/helper.js';
 
 import CustomPopup from '../auth/Successfullypass';
  
 export default function Register(){
-    const navigate = useNavigate();
+    
+
+     const goBack = HandleGoBack();
+
+     const navigate = useNavigate();
     const[uname, setUname] = useState('');
     // const[email, setEmail] = useState('');
     const [isActive, setIsActive] = useState(false);
@@ -116,7 +121,7 @@ const responseGoogle =async (authResult)=>{
             
         {isPopupOpen && <CustomPopup message={popupMessage} onClose={closePopup}/>}
     <div class="header fixed-top bg-surface">
-        <a href="#" class="left back-btn"><i class="icon-left-btn"></i></a>
+        <a onClick={goBack} class="left back-btn"><i class="icon-left-btn"></i></a>
     </div>
     <div class="pt-45">
         <div class="tf-container">
