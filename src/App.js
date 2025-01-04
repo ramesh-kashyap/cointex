@@ -1,10 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+
 import React from 'react';
 import { BrowserRouter  as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 // wallet
 import Wallet from './pages/wallet/wallet';
+import Balancerecord from './pages/wallet/Balancerecord';
+
+import Binance from './pages/wallet/Binance';
+
 import Cryptocurrency from './pages/wallet/Cryptocurrency';
 import Choosepayment from './pages/wallet/Choosepayment';
 import Buyquantity from './pages/wallet/Buyquantity';
@@ -53,6 +58,10 @@ function App() {
       <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       <Route path="/exchange" element={<ProtectedRoute><Exchange /></ProtectedRoute>} />
       <Route path="/earn" element={<ProtectedRoute><Earn /></ProtectedRoute>} />
+      <Route path="/Binance" element={<ProtectedRoute><Binance/></ProtectedRoute>}/>
+      <Route path="/Balancerecord" element={<ProtectedRoute><Balancerecord/></ProtectedRoute>}/>
+
+
 
       {/* Wallet Routes */}
       <Route path="/wallet" element={<ProtectedRoute><Wallet /></ProtectedRoute>} />

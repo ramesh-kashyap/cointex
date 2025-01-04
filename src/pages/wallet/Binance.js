@@ -1,85 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { jwtDecode } from 'jwt-decode';
-import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import Api from '../../Requests/Api';
-export default function ApiBind() {
-  const navigate = useNavigate();
-    const location = useLocation();
-    const { exchangeName } = location.state || {};
-      // Render a fallback message if exchangeName is not available
-   const [data, setData] = useState(null);
-  const [apiKey, setApiKey] = useState('');
-  const [secretKey, setSecretKey] = useState('');
-  
-   
-
-  const handleApiKeyChange = (e) => setApiKey(e.target.value);
-  const handleSecretKeyChange = (e) => setSecretKey(e.target.value);
-  const formSubmit = async (e) => {
-    e.preventDefault(); // Prevent form from submitting the default way
-
-    // Get user data from JWT in local storage
-    const token = localStorage.getItem('authToken'); // JWT token stored in localStorage
-    if (!exchangeName) {
-    return <div>Error: No exchange selected. Please go back and select one.</div>;
-  }
-
-    // Decode JWT to extract user_id
-    const decoded = jwtDecode(token);
-    const user_id = decoded.userId; // Extracting user_id from decoded token
-
-    // Form data to submit
-    const formData = {
-      user_id,
-      apiKey,
-      apiSecret :secretKey,
-      
-       remark: exchangeName,
-    };
-    try {
-        // You can replace the following line with an actual API call (e.g., using axios or fetch)
-        console.log('Submitting data:', formData);
-        const response = await Api.post('/apiBind', formData); // Make API request
-            console.log('Registration successful:', response.data);
-        // Handle the response as needed (e.g., show a success message)
-        navigate('/');
-      } catch (error) {
-        console.error('Error submitting form data:', error);
-      }
-        
-  
-}
 
 
-useEffect(() => {
-  // Fetch account info from backend
- const token = localStorage.getItem('authToken');
-         const decoded = jwtDecode(token);
-         const userId = decoded.userId;// Extracting user_id from decoded token 
-  const fetchAccountInfo = async () => {
-      try {
-         
-        
-          const response2 = await Api.get(`/future-account-info?userId=${userId}`);
-          setData(response2.data);
-          console.log('Future Account Info:', response2.data);
-      } catch (err) {
-         
-          console.error(err);
-      }
-  };
+import React from 'react';
 
-  fetchAccountInfo();
-}, []);
+export default function Binance() {
   return (
     <div>
-        
-          {exchangeName && (
-            <>
       <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
         <a href="javascript:void(0);" className="left back-btn"><i className="icon-left-btn"></i></a>
-        <h3> {exchangeName} </h3>
+        <h3>Binance Us</h3>
       </div>
       
       <div className="pt-45 pb-90">
@@ -116,7 +44,6 @@ useEffect(() => {
 
           <br />
           <br />
-          <form>
           <ul className="mt-12 accent-box-v4 bg-menuDark">
             <li className="d-flex align-items-center justify-content-between"></li>
             <br />
@@ -131,9 +58,6 @@ useEffect(() => {
                 padding: "5px",
                 backgroundColor: "transparent",
               }}
-              name="apiKey"
-              value={apiKey}
-        onChange={handleApiKeyChange}
             />
             <br />
             <br />
@@ -149,23 +73,19 @@ useEffect(() => {
                 padding: "5px",
                 backgroundColor: "transparent",
               }}
-                  value={secretKey}
-        onChange={handleSecretKeyChange}
-              name="secretKey"
             />
-           
             <br />
             <br />
             <br />
             <div className="inner-bar">
-              <button className="tf-btn lg primary" onClick={formSubmit}  >
+              <a href="#" className="tf-btn lg primary" data-bs-toggle="modal" data-bs-target="#otpPin">
                 Import
-              </button>
+              </a>
             </div>
             <br />
           </ul>
   
-          </form>
+
 
           <li>
             <a href="recharge.html" className="accent-box item-check-style3 bg-menuDark">
@@ -173,9 +93,9 @@ useEffect(() => {
                 <div className="flex-grow-1">
                   <span className="text-small">Trust IPs Only (Recommended)</span>
                   <p className="mt-8 d-flex align-items-center gap-4">
-                  {data?.publicIP || '0'}
+                    123432.123.432.5678.987.
                     <br />
-                   
+                    345.87654.87654.98765.....
                   </p>
                 </div>
                 <p>copy</p>
@@ -200,9 +120,9 @@ useEffect(() => {
           </ul>
         </div>
       </div>
-</>
-)}
-      {/* <div className="modal fade action-sheet sheet-down" id="otpPin">
+
+      {/* filter otp */}
+      <div className="modal fade action-sheet sheet-down" id="otpPin">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="header d-flex justify-content-center align-items-center">
@@ -224,7 +144,7 @@ useEffect(() => {
           </div>
         </div>
       </div>
-   */}
+
       {/* filter success */}
       <div className="modal fade modalCenter" id="success">
         <div className="modal-dialog modal-dialog-centered" role="document">
@@ -257,8 +177,9 @@ useEffect(() => {
         </div>
       </div>
 
-     
-          
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
     </div>
   );
 }
