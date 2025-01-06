@@ -6,6 +6,10 @@ import { BrowserRouter  as Router, Route, Routes, Navigate } from 'react-router-
 
 // wallet
 import Wallet from './pages/wallet/wallet';
+import Robot from './pages/wallet/Robot';
+import Futures from './pages/wallet/Futures';
+
+
 import Balancerecord from './pages/wallet/Balancerecord';
 
 import Binance from './pages/wallet/Binance';
@@ -35,6 +39,7 @@ import Blogdetails from './pages/profile/blogdetails';
 
 // home
 import Dashboard from './pages/home/dashboard';
+
 import Exchange from './pages/promotion/exchange-market';
 import Earn from './pages/activity/earn';
 
@@ -56,7 +61,12 @@ function App() {
     <Routes>
       {/* Home Routes */}
       <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+      
       <Route path="/exchange" element={<ProtectedRoute><Exchange /></ProtectedRoute>} />
+      <Route path="/Robot" element={<ProtectedRoute><Robot/></ProtectedRoute>} />
+      <Route path="/Futures" element={<ProtectedRoute><Futures/></ProtectedRoute>} />
+
+
       <Route path="/earn" element={<ProtectedRoute><Earn /></ProtectedRoute>} />
       <Route path="/Binance" element={<ProtectedRoute><Binance/></ProtectedRoute>}/>
       <Route path="/Balancerecord" element={<ProtectedRoute><Balancerecord/></ProtectedRoute>}/>
