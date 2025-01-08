@@ -4,23 +4,27 @@ export default function ChangePass(){
     const [password, setPassword] = useState('');
     const [cpassword, setCpassword]  = useState('');
     const [newpassword, setNewpassword] = useState('');
-    const submitForm = async (e) =>{
+    const submitForm = async (e) => {
         e.preventDefault();
-        try{
-            const response = await Api.post('/change-password',{
-                password: password,
-                cpassword: cpassword,
-                newpassword: newpassword,
-            })
-            if(response.data){
-              console.log(response.data,'Your password change')
+    
+        if (cpassword === newpassword) {
+            try {
+                const response = await Api.post('/change-password', {
+                    password: password,
+                    newpassword: newpassword,
+                });
+    
+                if (response.data) {
+                    console.log(response.data, 'Your password has been changed');
+                }
+            } catch (error) {
+                console.error('Something went wrong, please try again:', error);
             }
+        } else {
+            console.log('Passwords do not match');
         }
-        catch{
-            console.error('Somthing is wrong please fill again!');
-            
-        }
-    }
+    };
+    
 
     return(
 <div>
