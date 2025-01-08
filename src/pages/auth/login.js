@@ -62,7 +62,7 @@ export default function Login(){
         console.error('Error during login:', error.response || error.message || error);
         setPopupMessage(error.response?.data); // Set the message from the response
         setIsPopupOpen(true); 
-        alert('An error occurred during the API request');
+        // alert('An error occurred during the API request');
     }
 
     }
