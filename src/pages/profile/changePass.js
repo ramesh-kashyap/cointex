@@ -1,6 +1,8 @@
 import react, { useState } from 'react';
 import Api from '../../Requests/Api';
+import { useNavigate } from 'react-router-dom';
 export default function ChangePass(){
+    const navigate = useNavigate();
     const [password, setPassword] = useState('');
     const [cpassword, setCpassword]  = useState('');
     const [newpassword, setNewpassword] = useState('');
@@ -15,6 +17,7 @@ export default function ChangePass(){
                 });
     
                 if (response.data) {
+                    navigate('/',response.data, 'Your password has been changed')
                     console.log(response.data, 'Your password has been changed');
                 }
             } catch (error) {
