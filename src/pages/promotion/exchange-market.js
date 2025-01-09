@@ -81,7 +81,7 @@ export default function ExchangeMarket() {
     } else if (value >= 1e6) {
       return (value / 1e6).toFixed(2) + "M"; // Million
     } else {
-      return value.toLocaleString(); // Default
+      return value.toLocaleString(); 
     }
   }
   
