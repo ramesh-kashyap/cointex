@@ -26,14 +26,26 @@ export default function Dashboard(){
     };
     
     useEffect(() => {
-        // Check if the popup should be shown
-        const isPopupShown = sessionStorage.getItem('popupShown');
+        // Fetch account info from backend
+        const token = localStorage.getItem('authToken');
+        const decoded = jwtDecode(token);
+        const userId = decoded.userId;// Extracting user_id from decoded token 
+        const fetchAccountInfo = async () => {
+            try {
+                const response = await Api.get(`/account-info?userId=${userId}`);
+                setAccountInfo(response.data);
+                console.log('Account Info:',userId);   
 
-        if (!isPopupShown) {
-            // Show the popup if it's not shown before
-            setPopupVisible(true);
-            sessionStorage.setItem('popupShown', 'true');
-        }
+                const response2 = await Api.get(`/future-account-info?userId=${userId}`);
+                setData(response2.data);
+                console.log('Future Account Info:', response2.data);
+            } catch (err) {
+                setError('Failed to fetch account info');
+                console.error(err);
+            }
+        };
+
+        fetchAccountInfo();
     }, []);
 
     const closePopup = () => {

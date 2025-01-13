@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 export default function ExchangeMarket() {
   const [coins, setCoins] = useState([]);
   const [prices, setPrices] = useState({});
@@ -159,31 +159,31 @@ export default function ExchangeMarket() {
         </div>
       </div>
 
-      <div className="menubar-footer footer-fixed">
+       <div className="menubar-footer footer-fixed">
         <ul className="inner-bar">
-          <li>
-            <a href="home.html">
+          <li className="active">
+          <Link to="/">
               <i className="icon icon-home2"></i>
               Home
-            </a>
+              </Link>
           </li>
-          <li className="active">
-            <a href="exchange-market.html">
+          <li>
+          <Link to="/exchange">
               <i className="icon icon-exchange"></i>
               Exchange
-            </a>
+              </Link>
           </li>
           <li>
-            <a href="earn.html">
-              <i className="icon icon-earn2"></i>
+          <Link to="/earn">
+              <i className="icon icon-earn"></i>
               Earn
-            </a>
+              </Link>
           </li>
           <li>
-            <a href="wallet.html">
+          <Link to="/wallet">
               <i className="icon icon-wallet"></i>
               Wallet
-            </a>
+              </Link>
           </li>
         </ul>
       </div>
