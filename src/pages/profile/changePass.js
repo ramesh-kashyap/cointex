@@ -9,16 +9,14 @@ export default function ChangePass(){
     const submitForm = async (e) => {
         e.preventDefault();
     
-        if (cpassword === newpassword) {
+        if (password === cpassword) {
             try {
                 const response = await Api.post('/change-password', {
                     password: password,
                     newpassword: newpassword,
                 });
-    
                 if (response.data) {
-                    navigate('/',response.data, 'Your password has been changed')
-                    console.log(response.data, 'Your password has been changed');
+                    navigate('/',response.data, 'Your password has been changed');
                 }
             } catch (error) {
                 console.error('Something went wrong, please try again:', error);

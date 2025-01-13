@@ -32,7 +32,6 @@ export default function Dashboard(){
         const userId = decoded.userId;// Extracting user_id from decoded token 
         const fetchAccountInfo = async () => {
             try {
-               
                 const response = await Api.get(`/account-info?userId=${userId}`);
                 setAccountInfo(response.data);
                 console.log('Account Info:',userId);   

@@ -31,6 +31,7 @@ import Recharge from './pages/wallet/Recharge';
 
 import Blogdetails from './pages/profile/blogdetails';
 import ChangePass from './pages/profile/changePass';
+import Invite from './pages/profile/inviteFriends';
 
 
 // home
@@ -72,8 +73,11 @@ function App() {
       <Route path="/Qrcode" element={<ProtectedRoute><Qrcode /></ProtectedRoute>} />
       <Route path="/Cryptocurrency" element={<ProtectedRoute><Cryptocurrency /></ProtectedRoute>} />
       <Route path="/Api-Bind" element={<ProtectedRoute><Apibind /></ProtectedRoute>} />
+
+
       {/* Profile Routes */}
-      <Route path="/Recharge" element={<Recharge/>}></Route>
+      <Route path="/invite" element={<ProtectedRoute><Invite/></ProtectedRoute>}/>
+      <Route path="/Recharge" element={<ProtectedRoute><Recharge/></ProtectedRoute>}></Route>
       <Route path="/Userinfo" element={<ProtectedRoute><Userinfo /></ProtectedRoute>} />
       <Route path="/listblog" element={<ProtectedRoute><Listblog /></ProtectedRoute>} />
       <Route path="/blog-details" element={<ProtectedRoute><Blogdetails /></ProtectedRoute>} />
