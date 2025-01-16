@@ -53,17 +53,22 @@ const OTPForm = () => {
         
             const response = await Api.post('/verify-otp', payload);
             setMessage(response.data.message || "OTP verified successfully!");
-           if(response){
-            const message = localStorage.getItem('message');
+           if(response){  
+            const message = sessionStorage.getItem('message');
+            console.log(message);
             if(message==='User registered successfully. Please verify your OTP.'){
-                localStorage.removeItem('isRegistered'); 
-                localStorage.removeItem('message', 'User registered successfully. Please verify your OTP.');
+                console.log(response); 
+                sessionStorage.removeItem('isRegistered'); 
+                sessionStorage.removeItem('message', 'User registered successfully. Please verify your OTP.');
                 sessionStorage.removeItem('phone');
                 localStorage.setItem('authToken', response.data.token);
                 navigate('/');}
              if(message==='forgot OTP'){
                 localStorage.removeItem('forgot OTP')
                 navigate('/newpass');
+            }
+            else{
+                navigate('/register');
             }
 
            }
