@@ -21,10 +21,13 @@ export default function Invite() {
     const toggleShareOptions = () => {
         setShowOptions((prev) => !prev);
     };
-
-
     const [data, setData] = useState(null); // State to store fetched data
     const textAreaRef = useRef(null); // Ref for the text area
+
+    const baseURL = `${window.location.origin}`; // Extract the base URL
+    const [referralCode, setReferralCode] = useState("Loading..."); // Example referral code
+  
+    const registerURL = `${baseURL}/register?referral=${referralCode}`;
 
     const setCopy = () => {
         if (textAreaRef.current) {
@@ -32,6 +35,11 @@ export default function Invite() {
             alert('Copied to clipboard!'); // Show feedback to the user
         }
     };
+    useEffect(() => {
+        if (data?.referral_code) {
+            setReferralCode(data.referral_code);
+        }
+    }, [data]);
 
     useEffect(() => {
         // Fetch account info from backend
@@ -89,7 +97,7 @@ export default function Invite() {
                         <li className="card border-primary round-2 p-12 mt-12">
                             <span className="text-primary">2. Telegram Referral Link</span>
                             <div className="d-flex align-items-center justify-content-between mt-8">
-                                <span className="text-secondary">https://t.me/uTrading_AI_Bot?start=ref-5C9QY6</span>
+                                <span className="text-secondary">{registerURL}</span>
                                 <button className="btn-icon" style={{ width: '20px' }} onClick={toggleShareOptions}><i className="icon-copy"></i></button>
                             </div>
                         </li>
@@ -109,19 +117,19 @@ export default function Invite() {
             width: "300px",
         }}
     >
-        <FacebookShareButton url={shareUrl} quote={title}>
+        <FacebookShareButton url={registerURL} quote={`Join me on uTrading with this referral link: ${registerURL}`}>
             <div style={{ display: "flex", alignItems: "center", marginBottom: "15px", cursor: "pointer" }}>
                 <FacebookIcon size={32} round />                
             </div>
         </FacebookShareButton>
 
-        <TwitterShareButton url={shareUrl} title={title}>
+        <TwitterShareButton url={registerURL} quote={`Join me on uTrading with this referral link: ${registerURL}`}>
             <div style={{ display: "flex", alignItems: "center", marginBottom: "15px", cursor: "pointer" }}>
                 <TwitterIcon size={32} round />
             </div>
         </TwitterShareButton>
 
-        <WhatsappShareButton url={shareUrl} title={title}>
+        <WhatsappShareButton url={registerURL} quote={`Join me on uTrading with this referral link: ${registerURL}`}>
             <div style={{ display: "flex", alignItems: "center", marginBottom: "15px", cursor: "pointer" }}>
                 <WhatsappIcon size={32} round />
             </div>
@@ -133,7 +141,7 @@ export default function Invite() {
             </div>
         </LinkedinShareButton>
 
-        <EmailShareButton url={shareUrl} subject={title} body="Check this out!">
+        <EmailShareButton url={registerURL} subject={title} body="Join me on uTrading with this referral link: ${registerURL}">
             <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
                 <EmailIcon size={32} round />
             </div>
