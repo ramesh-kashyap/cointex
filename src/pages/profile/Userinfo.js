@@ -1,5 +1,6 @@
 import React from 'react';
 import { HandleGoBack } from '../../Helper/helper.js';
+import { Link } from 'react-router-dom'
 export default function  Userinfo(){
    const goBack = HandleGoBack();
   return(
@@ -53,18 +54,22 @@ export default function  Userinfo(){
             <div className="pt-12 pb-12 mt-4">
                 <h5>Exchange</h5>
                 <ul className="mt-16 grid-3 gap-12">
+                    <Link to={"/change-password"}>
                     <li>
                         <a href="#" className="tf-list-item d-flex flex-column gap-8 align-items-center text-break text-center">
                             <i className="icon icon-convert"></i>
-                            Convert
+                            Change Password
                         </a>
                     </li>
+                    </Link>
+                    <Link to={"/invite"}>
                     <li>
                         <a href="#" className="tf-list-item d-flex flex-column gap-8 align-items-center text-break text-center">
                             <i className="icon icon-metalogo"></i>
-                            Consign
+                            Invite Friends
                         </a>
                     </li>
+                    </Link>
                     <li>
                         <a href="#" className="tf-list-item d-flex flex-column gap-8 align-items-center text-break text-center">
                             <i className="icon icon-bank"></i>
@@ -121,7 +126,7 @@ export default function  Userinfo(){
                         </a>
                     </li>
                     <li>
-                        <a href="#" className="tf-list-item d-flex flex-column gap-8 align-items-center">
+                        <a href="https://t.me/nodetraders" className="tf-list-item d-flex flex-column gap-8 align-items-center">
                             <i className="icon icon-headset"></i>
                             Support
                         </a>
