@@ -32,6 +32,7 @@ import Recharge from './pages/wallet/Recharge';
 import Blogdetails from './pages/profile/blogdetails';
 import ChangePass from './pages/profile/changePass';
 import Invite from './pages/profile/inviteFriends';
+import Profile from './pages/profile/profile';
 
 
 // home
@@ -86,6 +87,7 @@ function App() {
       <Route path="/Bind-List" element={<ProtectedRoute><Bindlist /></ProtectedRoute>} />
       <Route path="/change-password" element={<ProtectedRoute><ChangePass/></ProtectedRoute>}/>
       <Route path="/Cointex-Store" element={<ProtectedRoute><Cointexstore /></ProtectedRoute>}/>
+      <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
 
       {/* Auth Routes */}
       <Route path="/login" element={<PublicRoute><GoogleAuthWrapper /></PublicRoute>} />
