@@ -33,7 +33,8 @@ import Blogdetails from './pages/profile/blogdetails';
 import ChangePass from './pages/profile/changePass';
 import Invite from './pages/profile/inviteFriends';
 import Profile from './pages/profile/profile';
-
+import ChangeName from './pages/profile/change-name';
+import Camera from './pages/profile/camera';
 
 // home
 import Dashboard from './pages/home/dashboard';
@@ -88,6 +89,8 @@ function App() {
       <Route path="/change-password" element={<ProtectedRoute><ChangePass/></ProtectedRoute>}/>
       <Route path="/Cointex-Store" element={<ProtectedRoute><Cointexstore /></ProtectedRoute>}/>
       <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
+      <Route path="/change-name" element={<ProtectedRoute><ChangeName/></ProtectedRoute>}/>
+      <Route path="/camera" element={<ProtectedRoute><Camera/></ProtectedRoute>}/>
 
       {/* Auth Routes */}
       <Route path="/login" element={<PublicRoute><GoogleAuthWrapper /></PublicRoute>} />
