@@ -1,6 +1,8 @@
-import react from "react";
+import react  from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 export default function Profile(){
+    
+
     const logout = () =>{
         localStorage.removeItem("authToken");
         navigate('/login');
@@ -33,11 +35,12 @@ export default function Profile(){
             </a>
             <ul className="mt-16 pb-12 line-bt">
                 <li data-bs-toggle="modal" data-bs-target="#changeProfile">
-                    <a href="javascript:void(0);" className="d-flex justify-content-between align-items-center">
-                        <h5>Profile picture</h5>
-                        <span className="icon-arr-right text-secondary fs-12"></span>
-                    </a>
+                <a href="#" onClick={(e) => e.preventDefault()} className="d-flex justify-content-between align-items-center">
+                 <h5>Profile picture</h5>
+                <span className="icon-arr-right text-secondary fs-12"></span>
+                </a>
                 </li>
+
                 <li>
                     <a href="javascript:void(0);" className="mt-16 d-flex justify-content-between align-items-center">
                         <p className="text-small">UID</p>
@@ -45,7 +48,7 @@ export default function Profile(){
                     </a>
                 </li>
                 <li>
-                    <a href="change-name.html" className="mt-16 d-flex justify-content-between align-items-center">
+                    <a href="" className="mt-16 d-flex justify-content-between align-items-center"  onClick={()=>navigate('/change-name')}>
                         <p className="text-small">Name</p>
                         <span className="text-secondary d-flex gap-8 align-items-center">Tony Nguyen <i className="icon-arr-right fs-12 text-secondary"></i></span>
                     </a>
@@ -57,7 +60,7 @@ export default function Profile(){
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" className="mt-16 d-flex justify-content-between align-items-center">
+                    <a  className="mt-16 d-flex justify-content-between align-items-center" data-bs-target="#logout">
                         <p className="text-small">Social media accounts</p>
                         <span className="icon-arr-right text-secondary fs-16"></span>
                     </a>
@@ -133,7 +136,7 @@ export default function Profile(){
                
             </div>
         </div>
-    </div>
+    </div>    
     <div className="modal fade action-sheet" id="filterPicture">
         <div className="modal-dialog" role="document">
             <div className="modal-content">
@@ -142,7 +145,7 @@ export default function Profile(){
                     <span className="icon-cancel" data-bs-dismiss="modal"></span>
                 </div>
                 <ul className="mt-20 pb-16">
-                    <li data-bs-dismiss="modal"><div className="d-flex justify-content-between align-items-center gap-8 text-large  item-check active">Take a photo <i className="icon icon-check-circle"></i> </div></li>
+                    <li data-bs-dismiss="modal"><div className="d-flex justify-content-between align-items-center gap-8 text-large  item-check active" onClick={()=>navigate('/camera')}>Take a photo <i className="icon icon-check-circle"></i> </div></li>
                     <li className="mt-4" data-bs-dismiss="modal"><div className="d-flex  justify-content-between gap-8 text-large item-check">Select photo from album <i className="icon icon-check-circle"></i></div></li>
                 </ul>
             </div>
