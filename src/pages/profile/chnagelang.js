@@ -12,6 +12,7 @@ export default function LanguageSelector() {
     return (
         <div>
             <h1>{t('welcome')}</h1>
+            <h1>{t('Invite')}</h1>
             <button onClick={() => changeLanguage('en')}>English</button>
             <button onClick={() => changeLanguage('hi')}>Hindi</button>
             <button onClick={() => changeLanguage('vn')}>Vietnamese</button>

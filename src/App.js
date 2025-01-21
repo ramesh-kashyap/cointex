@@ -4,8 +4,8 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter  as Router, Route, Routes, Navigate } from 'react-router-dom';
 //language change
-import LanguageSelector from './pages/profile/chnagelang';
-import { useTranslation } from 'react-i18next';
+// import LanguageSelector from './pages/profile/chnagelang';
+// import { useTranslation } from 'react-i18next';
 
 // wallet
 import Wallet from './pages/wallet/wallet';
@@ -94,7 +94,7 @@ function App() {
       <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
       <Route path="/change-name" element={<ProtectedRoute><ChangeName/></ProtectedRoute>}/>
       <Route path="/camera" element={<ProtectedRoute><Camera/></ProtectedRoute>}/>
-      <Route path="/chnagelang" element={<ProtectedRoute><LanguageSelector/></ProtectedRoute>}/>
+      {/* <Route path="/chnagelang" element={<ProtectedRoute><LanguageSelector/></ProtectedRoute>}/> */}
 
       {/* Auth Routes */}
       <Route path="/login" element={<PublicRoute><GoogleAuthWrapper /></PublicRoute>} />

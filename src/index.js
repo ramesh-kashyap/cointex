@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './pages/lang/i18n';
+// import './pages/lang/i18n';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 // Load Google Client ID from environment variables
