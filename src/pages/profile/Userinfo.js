@@ -1,7 +1,10 @@
 import React from 'react';
 import { HandleGoBack } from '../../Helper/helper.js';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 export default function  Userinfo(){
+    const { t } = useTranslation();
+
    const goBack = HandleGoBack();
   return(
 <div>
@@ -66,7 +69,7 @@ export default function  Userinfo(){
                     <li>
                         <a href="#" className="tf-list-item d-flex flex-column gap-8 align-items-center text-break text-center">
                             <i className="icon icon-metalogo"></i>
-                            Invite Friends
+                            {t('Invite Friends')}
                         </a>
                     </li>
                     </Link>
