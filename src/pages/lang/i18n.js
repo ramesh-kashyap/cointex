@@ -1,36 +1,23 @@
+// i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import HttpApi from 'i18next-http-backend';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
-  .use(initReactI18next)
+  .use(HttpApi) // Load translation files dynamically
+  .use(LanguageDetector) // Detect user language
+  .use(initReactI18next) // Bind with React
   .init({
-    debug: true,
-    fallbackLng: 'en',
-    interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
+    supportedLngs: ['en', 'es', 'fr'], // Supported languages
+    fallbackLng: 'en', // Fallback language
+    debug: true, // Set to false in production
+    backend: {
+      loadPath: '/locales/{{lng}}.json', // Path to translation files
     },
-    // language resources
-    resources: {
-      en: {
-        translation: {
-          welcome: "Welcome to React",
-          Invite: "Invite",
-          Friends: " Friends",
-        }
-      },
-      vn: {
-        translation: {
-          welcome: "Chào mừng đến với bình nguyên vô tận",
-          Friends: "Mitter",
-          Invite: "Nimataran"
-        }
-      },
-      hi: {
-        translation: {
-          welcome: "स्वागत है React में"
-        }
-      }
-    }
+    interpolation: {
+      escapeValue: false, // React already escapes strings
+    },
   });
 
 export default i18n;
