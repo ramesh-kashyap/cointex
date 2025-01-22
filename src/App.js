@@ -16,6 +16,7 @@ import Binance from './pages/wallet/Binance';
 import Cryptocurrency from './pages/wallet/Cryptocurrency';
 import Choosepayment from './pages/wallet/Choosepayment';
 import Buyquantity from './pages/wallet/Buyquantity';
+import Commession from './pages/wallet/Commession';
 // import Withdraw from './pages/wallet/Withdraw';
 
 import Qrcode from './pages/wallet/Qrcode';
@@ -38,7 +39,7 @@ import Invite from './pages/profile/inviteFriends';
 import Profile from './pages/profile/profile';
 import ChangeName from './pages/profile/change-name';
 import Camera from './pages/profile/camera';
-
+import FAQ from './pages/profile/faq';
 // home
 import Dashboard from './pages/home/dashboard';
 import Exchange from './pages/promotion/exchange-market';
@@ -78,7 +79,7 @@ function App() {
       <Route path="/Qrcode" element={<ProtectedRoute><Qrcode /></ProtectedRoute>} />
       <Route path="/Cryptocurrency" element={<ProtectedRoute><Cryptocurrency /></ProtectedRoute>} />
       <Route path="/Api-Bind" element={<ProtectedRoute><Apibind /></ProtectedRoute>} />
-
+      <Route path="/commession" element={<ProtectedRoute><Commession/></ProtectedRoute>}/>
 
       {/* Profile Routes */}
       <Route path="/invite" element={<ProtectedRoute><Invite/></ProtectedRoute>}/>
@@ -94,6 +95,7 @@ function App() {
       <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
       <Route path="/change-name" element={<ProtectedRoute><ChangeName/></ProtectedRoute>}/>
       <Route path="/camera" element={<ProtectedRoute><Camera/></ProtectedRoute>}/>
+      <Route path="/faq" element={<ProtectedRoute><FAQ/></ProtectedRoute>}/>
       {/* <Route path="/chnagelang" element={<ProtectedRoute><LanguageSelector/></ProtectedRoute>}/> */}
 
       {/* Auth Routes */}

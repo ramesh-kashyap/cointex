@@ -73,12 +73,14 @@ export default function  Userinfo(){
                         </a>
                     </li>
                     </Link>
+                    <Link to={"/commession"}>
                     <li>
                         <a href="#" className="tf-list-item d-flex flex-column gap-8 align-items-center text-break text-center">
                             <i className="icon icon-bank"></i>
-                            Deposit
+                            Commession
                         </a>
                     </li>
+                    </Link>
                     <li>
                         <a href="#" className="tf-list-item d-flex flex-column gap-8 align-items-center text-break text-center">
                             <i className="icon icon-fileText"></i>
