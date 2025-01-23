@@ -146,7 +146,7 @@ export default function Profile(){
                 </div>
                 <ul className="mt-20 pb-16">
                     <li data-bs-dismiss="modal"><div className="d-flex justify-content-between align-items-center gap-8 text-large  item-check active" onClick={()=>navigate('/camera')}>Take a photo <i className="icon icon-check-circle"></i> </div></li>
-                    <li className="mt-4" data-bs-dismiss="modal"><div className="d-flex  justify-content-between gap-8 text-large item-check">Select photo from album <i className="icon icon-check-circle"></i></div></li>
+                    <li className="mt-4" data-bs-dismiss="modal"><div className="d-flex  justify-content-between gap-8 text-large item-check"  onClick={()=>navigate('/upload')}>Select photo from album <i className="icon icon-check-circle"></i></div></li>
                 </ul>
             </div>
             

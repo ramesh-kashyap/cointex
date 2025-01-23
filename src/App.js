@@ -40,6 +40,7 @@ import Profile from './pages/profile/profile';
 import ChangeName from './pages/profile/change-name';
 import Camera from './pages/profile/camera';
 import FAQ from './pages/profile/faq';
+import Upload from './pages/profile/upload';
 // home
 import Dashboard from './pages/home/dashboard';
 import Exchange from './pages/promotion/exchange-market';
@@ -96,6 +97,7 @@ function App() {
       <Route path="/change-name" element={<ProtectedRoute><ChangeName/></ProtectedRoute>}/>
       <Route path="/camera" element={<ProtectedRoute><Camera/></ProtectedRoute>}/>
       <Route path="/faq" element={<ProtectedRoute><FAQ/></ProtectedRoute>}/>
+      <Route path="/upload" element={<ProtectedRoute><Upload/></ProtectedRoute>}/>
       {/* <Route path="/chnagelang" element={<ProtectedRoute><LanguageSelector/></ProtectedRoute>}/> */}
 
       {/* Auth Routes */}
