@@ -13,7 +13,7 @@ export default function Commession(){
         const response = await Api.get('/invite-comession');
         console.log('Response data:', response.data);
         if (response.data.success) {
-            setUserData(response.data.invite); // Update state with the user data
+            setUserData(response.data.rows); // Update state with the user data
             setLoading(false); // Set loading to false
           } else {
             setError(response.data.message || 'Failed to fetch data');
